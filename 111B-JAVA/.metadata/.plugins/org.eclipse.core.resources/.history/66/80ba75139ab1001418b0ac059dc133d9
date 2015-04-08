@@ -1,0 +1,13 @@
+
+public class PokerHands {
+	public static void main(String[] args){}
+	public static boolean  containsPair(int hand[]){}
+	public static boolean  containsTwoPair(int hand[]){}
+	public static boolean  containsThreeOfaKind(int hand[]){}
+	public static boolean  containsStraight(int hand[]){}
+	public static boolean  containsFullHouse(int hand[]){}
+	public static boolean  containsFourOfaKind(int hand[]){}
+	
+	
+
+}

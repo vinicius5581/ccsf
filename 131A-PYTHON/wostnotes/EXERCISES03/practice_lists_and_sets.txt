@@ -1,0 +1,100 @@
+--------------------------------------
+
+Is searching for a word very slooooooooow?
+
+Consider this:
+
+    Q: Which is faster, searching a word in a big LIST of words,
+    or searching for a word in a big SET of words.
+
+    A: Much faster to search for a word in a big SET.
+
+
+But, if the LIST is sorted alphabetically there are search algorithms
+that are fast, but we're not talking about that (yet).
+
+---------------------------------------   
+Now, onto basic practice building lists and sets.
+---------------------------------------
+
+
+Three ways to build a list.
+
+---------------------------------------
+
+>>> mylist = list()
+
+>>> mylist
+
+>>> for n in range(20):
+...     if n % 5 == 0:
+...         mylist.append(n)
+
+>>> mylist
+
+---------------------------------------
+
+>>> mylist = []
+
+>>> for n in range(100):
+...     if n % 5 == 0:
+...         mylist = mylist + [n]
+
+>>> mylist
+
+---------------------------------------
+
+>>> mylist = []
+
+>>> for n in range(100):
+...     if n % 5 == 0:
+...         mylist += [n]
+
+>>> mylist
+ 
+
+---------------------------------------
+
+Building a set.
+
+>>> myset = set()
+
+>>> for letter in "mississippi":
+...     myset.add(letter)
+
+>>> myset
+
+>>> len(myset)
+
+---------------------------------------
+Note that below we can not write {}, 
+we need to write set() to get an empty set.
+    
+
+>>> myotherset = set()
+
+>>> for letter in "spim":
+...     myotherset.add(letter)
+
+>>> myotherset
+
+>>> len(myset) == len(myotherset)
+
+
+>>> myset == myotherset
+
+---------------------------------------
+
+>>> onemoreset = set("mississippi")
+
+>>> onemoreset
+
+>>> len(onemoreset)
+
+---------------------------------------
+
+
+
+
+
+

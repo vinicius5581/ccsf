@@ -1,0 +1,39 @@
+
+public class IntList {
+	
+	private int[] data; 
+	private int elementCount;
+	
+	public IntList(){
+		elementCount = 0;
+		data = new int[4];
+	}
+	
+	public void add(int value){
+		
+		if (elementCount >= data.length){
+			doubleArrayCapacity();
+		}
+		
+		data[elementCount] = value;
+		elementCount ++;
+	}
+
+	
+	public int get(int index){
+		return data[index];
+	}
+	
+	public int size(){
+		return elementCount;
+	}
+
+
+	
+	private void doubleArrayCapacity(){
+		int[] newData = new int[data.length * 2];
+		data = newData;
+	
+	}
+	
+}

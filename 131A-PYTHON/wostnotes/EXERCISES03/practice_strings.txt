@@ -1,0 +1,134 @@
+EXERCISES03:practice_strings.txt
+
+Copyright (c)2015 Ulf Wostner <wostner@cyberprof.com> All rights reserved.
+Do not post or distribute in any form.
+
+Print this page up and then write your answer below each line.
+Then, enter the lines one by one into the python3 interactive shell.
+
+    $ python3
+
+Compare with the results you expected.
+
+Good QUIZ preparation.  You might find more files like this before next quiz.
+
+
+>>> s = "2what4now-454  "
+
+>>> s.strip()
+
+Did s change?
+
+>>> s
+
+>>> s.strip('45')
+
+>>>
+
+>>> t = s.strip('45')
+
+>>> len(s)
+
+
+>>> s.replace('4', '-')
+
+Did s change?
+
+>>> s
+
+>>> u = "Hello\tWorld"
+
+>>> len(u)
+
+>>> print(u)
+
+>>> u.replace('\t', '    ')
+
+Did u change?
+
+>>> u
+
+Now try some other str methods. 
+
+
+>>> v = "Did you read Catch 22?"
+
+>>> v.isalnum()
+
+>>> w = v[:-1]
+
+>>> w
+
+>>> w.isalnum()
+
+>>> w.isalpha()
+
+>>> BLANK, SPACE = '', ' '
+
+>>> len(BLANK), len(SPACE)
+>>> x = w.replace(SPACE, BLANK)
+
+>>> x
+
+>>> x.isalnum()
+
+>>> x.isalpha()
+
+>>> y = x.upper()
+
+>>> y
+
+>>> g = "Heard of ABBA be4?"
+
+>>> g.lower()
+
+
+All characters have a number. Memorize these.
+
+>>> ord('A'), ord('a'), ord(SPACE)
+
+You can get the character from its number.
+
+>>> chr(65), chr(66), chr(67)
+
+>>> chr(ord('?'))
+
+>>> for n in range(65, 69):
+...     print(chr(n))
+
+What is the number for the non-English character in the string below?
+
+>>> gonsalves = "Rob Gonçalves"
+
+>>>
+
+And just for fun, this is the (lunar) year of the ...
+
+>>> chr(32650)
+
+
+You may or may not see something interesting, depending on
+what fonts are on your computer.
+
+-------------------- 
+
+Now, some more technical bonus material about using the string methods
+str.maketrans() and str.translate()
+
+You can use two strings of equal length to create what's called a 
+translation table.  It's really just a dict.
+
+>>> mytrans = str.maketrans("AB4", 'ba5')
+
+Take a guess at what it looks like.
+
+>>> mytrans
+
+>>> type(mytrans)
+
+Now use that with the translate method for str.
+
+>>> g.translate(mytrans)
+
+--- end of this file ---
+

@@ -1,0 +1,63 @@
+Subject: CS131A:LAB03:palindromelab
+
+Greetings CS131A Students,
+
+We have worked on different ways to submit LAB03, and this is what we have decided:
+
+The deadline for LAB03 has been extended to Tuesday Feb 17 at 1:00pm.
+
+
+How to submit LAB03.
+
+(1) Go into your PYLABS directory on hills.
+
+    $ cd ~/PYLABS
+
+
+(2) Create a so-called "tarball" from your LAB03
+
+    $ tar czvf LAB03.tgz LAB03
+
+(3) You should now see a file LAB03.tgz next to your LAB03 directory.
+    
+    $ ls LAB03.tgz
+
+
+(4) Send that tarball LAB03.tgz to me on hills.  Here is how:
+
+(5) Start the pine mail program on hills.
+
+    $ pine
+
+(6) If you never used pine before it might ask to you to "enter" by typing E.
+
+(7) In pine you might see a list of messages. One of them is this message.
+
+It has subject 
+
+    Subject: CS131A:LAB03:palindromelab
+
+(8) Type R to reply.
+
+(9) You will see a field
+
+    Attachment:
+
+(10) IMPORTANT: In the attachment field enter you need to have
+
+    Attachment: LAB03.tgz
+
+(11) Use ^X to send the message (just like when you quit the pico editor).
+
+(12) When you are done with pine, type q to quit.
+
+(13) I extended the deadline to 1:00 pm  Tuesday February 17.
+
+Looking forward to seeing your programs!
+
+Ulf
+
+
+
+
+

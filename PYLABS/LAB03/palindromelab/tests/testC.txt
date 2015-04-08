@@ -1,0 +1,32 @@
+>>> import stringy
+>>> import sentences
+
+>>> s = "Ada"
+
+>>> stringy.is_palindrome(s)
+False
+
+>>> sentences.is_palindrome(s)
+True
+    
+>>> s = "Yreka Bakery"
+
+>>> stringy.is_palindrome(s)
+False
+
+>>> sentences.is_palindrome(s)
+True
+  
+
+>>> s = "why"
+
+>>> stringy.is_palindrome(s)
+False
+
+>>> sentences.is_palindrome(s)
+False
+
+  
+
+
+

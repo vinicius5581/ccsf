@@ -1,0 +1,7 @@
+
+public class IntList {
+	public void add(Int value){}
+	public void get(int index){
+		return 0;
+	}
+}

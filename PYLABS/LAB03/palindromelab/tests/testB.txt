@@ -1,0 +1,45 @@
+>>> from sentences import stripper, normalize, is_palindrome
+
+>>> stripper("Madam, I'm Adam!")
+'MadamImAdam'
+
+>>> normalize("Madam, I'm Adam!")
+'MADAMIMADAM'
+
+>>> normalize("No lemon, a Toyota, no melon!")
+'NOLEMONATOYOTANOMELON'
+
+Now to the palindromes.
+
+In the sentences module  we are less strict than in the stringy module
+so mores strings are considered palindromes.
+
+>>> is_palindrome('Bob')
+True
+
+>>> is_palindrome("race car")
+True
+
+>>> s = "A man, a plan, a canal, Panama!"
+
+>>> normalize(s)
+'AMANAPLANACANALPANAMA'
+
+>>> s
+'A man, a plan, a canal, Panama!'
+
+>>> is_palindrome(s)
+True
+
+>>> is_palindrome("Yreka Bakery")
+True
+
+>>> is_palindrome("Eureka Bakery")
+False
+
+>>> is_palindrome('wow-wow-wow')
+True
+
+>>> is_palindrome("No lemon, a Toyota, no melon!")
+True
+

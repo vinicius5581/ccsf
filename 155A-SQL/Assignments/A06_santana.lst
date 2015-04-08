@@ -1,0 +1,216 @@
+--------------
+/* Osmar Santana */
+
+    /* enable warnings! */
+
+use   a_vets
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+/*  TASK 00 */ 
+select user(), current_date(), version(), @@sql_mode
+--------------
+
+*************************** 1. row ***************************
+        user(): vinicius5581@localhost
+current_date(): 2015-02-25
+     version(): 5.5.41-0ubuntu0.14.04.1
+    @@sql_mode: 
+1 row in set (0.00 sec)
+
+--------------
+/*  TASK 01 */
+select cl_id, cl_name_last from vt_clients where cl_id not in (select cl_id from vt_animals)
+--------------
+
++--------+--------------+
+| cl_id  | cl_name_last |
++--------+--------------+
+|   3423 | Hawkins      |
+|   5686 | Biederbecke  |
+|   5689 | Biederbecke  |
+|   5698 | Biederbecke  |
+|   7212 | Davis        |
+|  25479 | Boston       |
+| 408763 | Turrentine   |
++--------+--------------+
+7 rows in set (0.00 sec)
+
+--------------
+/*  TASK 02 */
+select cl_id, cl_name_last from vt_clients where cl_id in (select cl_id from vt_animals)
+--------------
+
++-------+--------------+
+| cl_id | cl_name_last |
++-------+--------------+
+|   411 | Carter       |
+|  1825 | Harris       |
+|  1852 | Dalrymple    |
+|  3560 | Monk         |
+|  4534 | Montgomery   |
+|  5699 | Biederbecke  |
+|  6897 | Drake        |
+|  7152 | Brubeck      |
++-------+--------------+
+8 rows in set (0.00 sec)
+
+--------------
+/*  TASK 03 */
+select cl_id, cl_name_last from vt_clients where cl_id in (select cl_id from vt_animals where an_type in  ('hamster', 'capybara', 'porcupine', 'dormouse'))
+--------------
+
++-------+--------------+
+| cl_id | cl_name_last |
++-------+--------------+
+|  1825 | Harris       |
+|  3560 | Monk         |
+|  5699 | Biederbecke  |
++-------+--------------+
+3 rows in set (0.00 sec)
+
+--------------
+/*  TASK 04 */
+select cl_id, cl_name_last from vt_clients where cl_id in (select cl_id from vt_animals where an_type not in  ('snake', 'chelonian', 'crocodilian','lizard'))
+--------------
+
++-------+--------------+
+| cl_id | cl_name_last |
++-------+--------------+
+|   411 | Carter       |
+|  1825 | Harris       |
+|  1852 | Dalrymple    |
+|  3560 | Monk         |
+|  4534 | Montgomery   |
+|  5699 | Biederbecke  |
+|  6897 | Drake        |
++-------+--------------+
+7 rows in set (0.00 sec)
+
+--------------
+/*  TASK 05 */
+select an_id, an_name 
+from vt_animals 
+join vt_exam_headers using (an_id)
+join vt_staff using(stf_id) where stf_job_title = 'vet assnt'
+--------------
+
++-------+-----------+
+| an_id | an_name   |
++-------+-----------+
+| 15002 | George    |
+| 16002 | Fritz     |
+| 16002 | Fritz     |
+| 16002 | Fritz     |
+| 16002 | Fritz     |
+| 16002 | Fritz     |
+| 17002 | Fritzchen |
+| 17025 | 25        |
+| 17025 | 25        |
+| 17025 | 25        |
+| 17025 | 25        |
+| 17025 | 25        |
+| 17026 | 3P#_26    |
+| 17026 | 3P#_26    |
+| 17027 | 3P#_25    |
+| 17027 | 3P#_25    |
++-------+-----------+
+16 rows in set (0.00 sec)
+
+--------------
+/*  TASK 06 */
+select cl_id, cl_name_last, an_id, an_name, an_type, ex_id
+from vt_clients 
+right join vt_animals using (cl_id)
+left join vt_exam_headers using (an_id) where ex_id is null
+order by cl_id, an_id
+--------------
+
++-------+--------------+-------+----------+-----------+-------+
+| cl_id | cl_name_last | an_id | an_name  | an_type   | ex_id |
++-------+--------------+-------+----------+-----------+-------+
+|   411 | Carter       | 15165 | Burgess  | dog       |  NULL |
+|  1825 | Harris       | 21002 | Edger    | hedgehog  |  NULL |
+|  1825 | Harris       | 21006 | Koshka   | hamster   |  NULL |
+|  1852 | Dalrymple    | 21007 | NULL     | snake     |  NULL |
+|  1852 | Dalrymple    | 21314 | Adalwine | cat       |  NULL |
+|  1852 | Dalrymple    | 21315 | Baldric  | cat       |  NULL |
+|  1852 | Dalrymple    | 21316 | Etta     | cat       |  NULL |
+|  1852 | Dalrymple    | 21317 | Manfried | cat       |  NULL |
+|  1852 | Dalrymple    | 21318 | Waldrom  | cat       |  NULL |
+|  1852 | Dalrymple    | 21320 | Morris   | olinguito |  NULL |
+|  1852 | Dalrymple    | 21321 | Morton   | olinguito |  NULL |
+|  3560 | Monk         | 10002 | Gutsy    | cat       |  NULL |
+|  3560 | Monk         | 12038 | Gutsy    | porcupine |  NULL |
+|  4534 | Montgomery   | 11015 | Kenny    | snake     |  NULL |
+|  4534 | Montgomery   | 11025 | NULL     | bird      |  NULL |
+|  4534 | Montgomery   | 11029 | NULL     | bird      |  NULL |
+|  5699 | Biederbecke  | 21004 | Gutsy    | snake     |  NULL |
+|  6897 | Drake        | 16004 | Napper   | cat       |  NULL |
++-------+--------------+-------+----------+-----------+-------+
+18 rows in set (0.00 sec)
+
+--------------
+/*  TASK 07 */
+select cl_id, cl_name_last, an_id, an_name, an_type, ex_id
+from vt_clients 
+full join vt_animals using (cl_id)
+left join vt_exam_headers using (an_id) where ex_id is null
+order by cl_id, an_id
+--------------
+
++-------+--------------+-------+----------+-----------+-------+
+| cl_id | cl_name_last | an_id | an_name  | an_type   | ex_id |
++-------+--------------+-------+----------+-----------+-------+
+|   411 | Carter       | 15165 | Burgess  | dog       |  NULL |
+|  1825 | Harris       | 21002 | Edger    | hedgehog  |  NULL |
+|  1825 | Harris       | 21006 | Koshka   | hamster   |  NULL |
+|  1852 | Dalrymple    | 21007 | NULL     | snake     |  NULL |
+|  1852 | Dalrymple    | 21314 | Adalwine | cat       |  NULL |
+|  1852 | Dalrymple    | 21315 | Baldric  | cat       |  NULL |
+|  1852 | Dalrymple    | 21316 | Etta     | cat       |  NULL |
+|  1852 | Dalrymple    | 21317 | Manfried | cat       |  NULL |
+|  1852 | Dalrymple    | 21318 | Waldrom  | cat       |  NULL |
+|  1852 | Dalrymple    | 21320 | Morris   | olinguito |  NULL |
+|  1852 | Dalrymple    | 21321 | Morton   | olinguito |  NULL |
+|  3560 | Monk         | 10002 | Gutsy    | cat       |  NULL |
+|  3560 | Monk         | 12038 | Gutsy    | porcupine |  NULL |
+|  4534 | Montgomery   | 11015 | Kenny    | snake     |  NULL |
+|  4534 | Montgomery   | 11025 | NULL     | bird      |  NULL |
+|  4534 | Montgomery   | 11029 | NULL     | bird      |  NULL |
+|  5699 | Biederbecke  | 21004 | Gutsy    | snake     |  NULL |
+|  6897 | Drake        | 16004 | Napper   | cat       |  NULL |
++-------+--------------+-------+----------+-----------+-------+
+18 rows in set (0.00 sec)
+
+--------------
+/*  TASK 08 */
+select cl_id, cl_name_last
+from vt_clients 
+join vt_animals using (cl_id)
+where an_type in ('snake', 'chelonian', 'crocodilian','lizard','hamster', 'capybara', 'porcupine', 'dormouse')
+--------------
+
++-------+--------------+
+| cl_id | cl_name_last |
++-------+--------------+
+|  4534 | Montgomery   |
+|  3560 | Monk         |
+|  5699 | Biederbecke  |
+|  5699 | Biederbecke  |
+|   411 | Carter       |
+|  1825 | Harris       |
+|  5699 | Biederbecke  |
+|  5699 | Biederbecke  |
+|  7152 | Brubeck      |
+|  7152 | Brubeck      |
+|  5699 | Biederbecke  |
+|  1825 | Harris       |
+|  1825 | Harris       |
+|  1852 | Dalrymple    |
++-------+--------------+
+14 rows in set (0.00 sec)
+
+Bye

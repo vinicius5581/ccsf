@@ -1,0 +1,94 @@
+Greetings CS131A Students,
+
+Here is some interative shell practice. Good preparation for the quiz.
+
+(1) Print this file.
+
+(2) Write down what you expect the answers to be.
+
+(3) Run each command at the shell.
+
+    $ python3
+    >>> 3 * 'practice '
+
+
+Some loop practice;
+
+
+>>> i = 5
+>>> while i > 1:
+...     print(i)
+...     i = i - 1
+... 
+
+
+
+
+
+
+
+
+>>> j = 10
+>>> while j < 13:
+...     print(j)
+...     j += 1
+... 
+
+
+
+
+
+
+
+>>> VOWELS = "aeiou"
+>>> for letter in "madam":
+...     if letter in VOWELS:
+...         continue
+...     print(letter)
+
+
+
+
+>>> Q = "Got any Milk?"
+
+
+>>> for letter in Q:
+...     if letter.isupper() or letter in VOWELS:
+...         print(letter)
+
+
+
+# More str objects.
+
+
+>>> len('abc')
+
+
+
+
+>>> len('abc\n')
+
+
+
+
+>>> chr(ord('\t'))
+
+
+
+
+
+>>> ord('A') < ord('a')
+
+
+
+
+
+
+>>> chr(ord('K') + 1)
+
+
+
+
+
+
+

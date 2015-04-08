@@ -1,0 +1,13 @@
+
+Person p = new Person(); //Variable p is object of type Person
+                         //new create a new Person object
+                         //Person is a constructorp.setName("Fred");
+p.setMaximumBooks(10);
+//p.getName()  //expression. No semicolon (java.lang.String) Fred
+p.getMaximumBooks()
+
+
+//All Java classes are subclasses of the Object class, so...
+//all Java classes inherit methods from the Object class.
+//p.<method name> = run this method on object p.
+

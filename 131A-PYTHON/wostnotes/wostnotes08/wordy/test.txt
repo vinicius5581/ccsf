@@ -1,0 +1,41 @@
+Run this file from the command line by doing
+$ python3 runmytests.txt
+
+>>> file = 'tonguetwisters/howmuchwood.txt'
+>>> from wordreader import file2words
+>>> WORDS = file2words(file)
+>>> 'woodchuck' in WORDS
+True
+>>> 'woody' in WORDS
+False
+
+How many words are there in that list?
+
+>>> len(WORDS)
+31
+
+Now, let's get the word frequenecies in our list of WORDS.
+
+>>> from wordcounter import wordfreqs
+>>> d = wordfreqs(WORDS)
+>>> type(d)
+<class 'dict'>
+
+It's a dict so the keys are in unpredictable order.
+But, the built-in sorted actually , 
+returns a sorted list of the keys in d..
+
+>>> sorted(d)
+['a', 'as', 'chuck', 'how', 'if', 'much', 'wood', 'woodchuck', 'would']
+
+For each of those keys we can ask for the frequency in our file.
+
+>>> d['woodchuck']
+5
+
+>>> d['wood'], d['would']
+(4, 5)
+
+
+
+

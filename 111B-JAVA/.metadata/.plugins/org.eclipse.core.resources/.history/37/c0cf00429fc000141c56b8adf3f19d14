@@ -1,0 +1,34 @@
+
+public class MyCircleTester {
+
+	public static void main(String[] args) {
+		   MyCircle c1 = new MyCircle();
+		   MyCircle c2 = new MyCircle();
+		   MyCircle c3 = new MyCircle();
+		   
+		   c1.setX(2);
+		   c1.setY(4);
+		   c1.setRadius(4);
+		   
+		   System.out.println(c1.getX());
+		   System.out.println(c1.getY());
+		   System.out.println(c1.getRadius());
+		   System.out.println(c1.getArea());
+		   
+		   
+		   
+		   /*
+		   r2.setOrigin(3,3);
+		   r2.setHeight(2);
+		   r2.setWidth(10);
+		   
+		   System.out.println(r1.getArea());
+		   System.out.println(r2.getArea());
+		   
+		   
+		   System.out.println(r1.containsPoint(4,4));
+		   System.out.println(r1.isContained(r2));
+			*/
+	}
+
+}

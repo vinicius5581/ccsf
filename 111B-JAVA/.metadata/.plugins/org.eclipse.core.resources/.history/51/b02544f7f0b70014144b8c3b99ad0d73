@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class HighScores {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		ArrayList<String> names = new ArrayList<String>();
+		ArrayList<Integer> scores = new ArrayList<Integer>();
+		initialize(names,scores);
+
+	}
+	
+	/**
+	 * Ask the user for five names and five scores
+	 * @return
+	 */
+	public static void initialize(ArrayList<String> names, ArrayList<Integer> scores){
+		for(int i=0;i<5;i++){
+			int scoreCount = i+1;
+			System.out.print("Enter the name for score #"+scoreCount);
+			Scanner input = new Scanner(System.in);
+			names.add(input.next()); 
+			
+			System.out.print("Enter the score for score #"+scoreCount);
+			scores.add(input.nextInt()); 
+		}		
+	}
+	
+		
+		
+
+}

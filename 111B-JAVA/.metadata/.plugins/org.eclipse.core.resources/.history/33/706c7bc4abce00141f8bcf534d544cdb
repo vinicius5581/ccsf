@@ -1,0 +1,21 @@
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		IntList x = new IntList();
+		
+		x.add(22);
+		x.add(33);
+		x.add(-1);
+		
+		for (int i=0; i < 1000000; i++){
+			x.add(i);
+		}
+
+	}
+
+}

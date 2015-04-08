@@ -1,0 +1,45 @@
+
+>>> from stringy import is_palindrome
+
+>>> is_palindrome("mom")
+True
+
+Our test is case-sensitive.
+
+>>> is_palindrome("Bob")
+False
+
+
+>>> is_palindrome("?! 101 !?")
+True
+
+>>> is_palindrome("now I won")
+True
+
+
+>>> is_palindrome("RACE CAR")
+False
+
+>>> is_palindrome("RACECAR")
+True
+
+>>> is_palindrome("racecar")
+True
+
+
+Here are a few so-called corner-cases. 
+
+
+The empty string
+
+>>> BLANK = ""
+>>> is_palindrome(BLANK)
+True
+
+
+>>> SPACE = " "
+>>> is_palindrome(SPACE)
+True
+
+
+

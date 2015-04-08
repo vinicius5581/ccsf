@@ -1,0 +1,31 @@
+CORRECTION: The pythonistas URL is http://hills.ccsf.edu/~uwostner/cgi-bin/homepages.py
+
+
+Subject: CS131A:MESSAGE05: posted notes and scores
+
+
+Greetings CS131A Students,
+
+(1) The notes from the lecture this week, with Nehemiah doing a great job at the computer, are now 
+in wostnotes09.   Read those files and to recall the main ideas from the lecture.
+
+(2) Read the handouts from class and compare with the files in wostnotes08.  It’s closely related to (1) above,
+but organized in a more advanced way using functions, modules, and tests.  The package is named wordy, 
+the modules are named wordreader and wordcounter. 
+
+(3) Learn what you can from (2), and we will go into more detail next lecture.
+
+(4) I posted your quiz and lab scores at our class home page.
+
+(5) Check http://fog.ccsf.edu/~uwostner/reading to see the sections of our textbook that you will have read by the quiz next week.
+
+(6) Our  pythonista pages on hills are at http://hills.ccsf.edu/~uwostner/cgi-bin/homepages.py 
+
+(7) This message, and other messages are also in the wostnotes directory.  If there are minor changes or corrections they will be made there.
+
+
+Keep up the good work everybody,
+
+
+Ulf
+

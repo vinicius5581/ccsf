@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+"""
+Copyright (c)2015 Ulf Wostner <wostner@cyberprof.com>. All rights reserved.
+Do not post or distribute in any form.
+
+Interactive script. 
+The user is asked repeatedly for an integer.
+Hits return to quit.
+
+"""
+
+GREETING = "Go multiply!"
+PROMPT = "Number please: "
+GOODBYE = "Bye. Thank you for using our multscript!"
+
+print(GREETING)
+
+product = 1
+
+# Infinite loop, unless we break out.
+
+while True:
+
+    s = input(PROMPT)    
+    s = s.strip()
+
+    if not s:
+        print(GOODBYE)
+        break
+
+    if not s.isdigit():
+        continue        # keep asking
+
+    n = int(s)
+
+    product = n * product
+    print("Product so far: ", product)
+    
+    

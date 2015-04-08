@@ -1,0 +1,95 @@
+import java.util.*;
+
+/**
+ * 
+ * @author Vinicius Santana
+ * This program will try to guess the number that you input
+ * based on hints given by the user.
+ * 
+ */
+public class NumberGuesser {
+
+	public static void main(String[] args) {
+		/*
+		do {
+			playOneGame();
+		} while (shouldPlayAgain());
+		*/
+		getUserResponseToGuess(20);		
+	}
+	
+	public static void playOneGame(){
+		playerNumber();
+		getMidpoint();
+	}
+	
+	/**
+	 * This methods asks the user for a number and return that number
+	 */
+	public static int playerNumber(){
+		int playerNumber;
+		
+		Scanner keyboard = new Scanner(System.in); 
+		System.out.println("Guess a number between 1 and 100");
+		playerNumber = keyboard.nextInt();
+		//System.out.println(playerNumber);
+		return playerNumber;
+	}
+	
+	/**
+	 * This function should ask the user if he/she wants to play another game
+	 * @return
+	 */
+	public static boolean shouldPlayAgain(){
+		Scanner input = new Scanner(System.in); 
+		
+		System.out.print("Play again? (y/n) ");
+        char playAgain = input.next().charAt(0);
+        if (playAgain == 'y'){
+        	return true;
+        }
+        else {
+        	return false;
+        }		
+	}
+	
+	/**
+	 * This function should accept the value guessed by the computer
+	 * and ask the user if its h(higher), l(lower) or c(correct).
+	 * @param guess
+	 * @return
+	 */
+	public static char getUserResponseToGuess(int guess){
+		Scanner input = new Scanner(System.in);		
+		char userResponse = 'u';			
+		while((userResponse != 'h' && userResponse != 'l' && userResponse != 'c')){
+			System.out.print("Is it" + guess + "? (h/l/c)");		
+			userResponse = input.next().charAt(0);
+			if (userResponse == 'h' || userResponse == 'l' || userResponse =='c'){
+				return userResponse;			
+			}
+		}
+	}
+
+	
+	/**
+	 * This function should accept two integers 
+	 * and it should return the midpoint of the two integers.
+	 * @param low
+	 * @param high
+	 */
+	public static void getMidpoint(int low, int high){
+		
+	}
+	
+	/**
+	 * This function should accept two arguments
+	 * and it should return a random number in between the low and high arguments. 
+	 * @param low
+	 * @param high
+	 */
+	public static void getRandomMidpoint(int low, int high){
+		
+	}
+	
+}

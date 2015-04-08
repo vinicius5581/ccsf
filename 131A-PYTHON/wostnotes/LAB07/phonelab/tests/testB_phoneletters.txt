@@ -1,0 +1,34 @@
+>>> from phoneletters import letter2digit, string2digits, phone
+
+
+>>> for letter in "ABCDE":
+...     print(letter, letter2digit(letter))
+A 2
+B 2
+C 2
+D 3
+E 3
+
+>>> string2digits("T1P")
+'817'
+
+>>> string2digits('ABC0123')
+'2220123'
+
+>>> string2digits("CATCH22")
+'2282422'
+
+
+>>> string2digits("GOOD4U2")
+'4663482'
+
+>>> phone(exchange='P3T', number='FO0D', areacode='N0T')
+'(608) 738-3603'
+
+>>> phone(exchange='BEX', number='FO0D', areacode='H1L')
+'(415) 239-3603'
+
+
+
+
+

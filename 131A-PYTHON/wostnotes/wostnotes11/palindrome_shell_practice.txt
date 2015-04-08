@@ -1,0 +1,106 @@
+""" Notes: CS131A Python Programming.  Wostner, Spring 2015.
+Based on interactive shell session with Michael at the computer.
+Copyright (c) 2015 Ulf Wostner <wostner@cyberprof.com>
+All rights reserved.  Do not post or distribute in any form.
+"""
+
+>>> s = "radar"
+>>> t = "radio"
+
+>>> u = t[::-1]
+>>> u
+'oidar'
+
+>>> s.
+s.__add__(           s.__rmod__(          s.istitle(
+s.__class__(         s.__rmul__(          s.isupper(
+s.__contains__(      s.__setattr__(       s.join(
+s.__delattr__(       s.__sizeof__(        s.ljust(
+s.__dir__(           s.__str__(           s.lower(
+s.__doc__            s.__subclasshook__(  s.lstrip(
+s.__eq__(            s.capitalize(        s.maketrans(
+s.__format__(        s.casefold(          s.partition(
+s.__ge__(            s.center(            s.replace(
+s.__getattribute__(  s.count(             s.rfind(
+s.__getitem__(       s.encode(            s.rindex(
+s.__getnewargs__(    s.endswith(          s.rjust(
+s.__gt__(            s.expandtabs(        s.rpartition(
+s.__hash__(          s.find(              s.rsplit(
+s.__init__(          s.format(            s.rstrip(
+s.__iter__(          s.format_map(        s.split(
+s.__le__(            s.index(             s.splitlines(
+s.__len__(           s.isalnum(           s.startswith(
+s.__lt__(            s.isalpha(           s.strip(
+s.__mod__(           s.isdecimal(         s.swapcase(
+s.__mul__(           s.isdigit(           s.title(
+s.__ne__(            s.isidentifier(      s.translate(
+s.__new__(           s.islower(           s.upper(
+s.__reduce__(        s.isnumeric(         s.zfill(
+s.__reduce_ex__(     s.isprintable(       
+
+>>> s.isupper()
+False
+
+>>> s.upper()
+'RADAR'
+
+>>> s
+'radar'
+
+
+First attempt at defining is_palindrome.
+
+>>> def is_palindrome(mystring):
+...     if (mystring == mystring[::-1]):
+...         return True
+...     else:
+...         return False
+... 
+
+>>> is_palindrome("radar"), is_palindrome("radio")
+(True, False)
+
+>>> is_palindrome("Radar")
+False
+
+Much shorter, more pythonic definition of is_palindrome.
+
+>>> def is_palindrome(mystring):
+...     return mystring == mystring[::-1]
+
+>>> is_palindrome("radar"), is_palindrome("radio")
+(True, False)
+
+Some corner-cases.
+
+>>> blank, space = "", " "
+>>> is_palindrome(blank), is_palindrome(space)
+(True, True)
+
+Now, a more complicated definition 
+but good to see how recursion works.
+Recursion is when a function calls itself,
+like pal does below.
+
+>>> def pal(s):
+...     if s == '':
+...         return True
+...     else:
+...         return s[0] == s[-1]  and  pal(s[1:-1]) 
+... 
+>>> pal("radio"), pal("radar"), pal("racecar")
+(False, True, True)
+
+It could be even shorter, but it's becoming harder to read.
+
+>>> def pal(s):
+...     return not s  or s[0] == s[-1]  and  pal(s[1:-1])
+...
+
+
+
+More parentheses might make it easier to follow the logic.
+
+>>> def pal(s):
+...     return (not s)  or ((s[0] == s[-1])  and  pal(s[1:-1]))
+...

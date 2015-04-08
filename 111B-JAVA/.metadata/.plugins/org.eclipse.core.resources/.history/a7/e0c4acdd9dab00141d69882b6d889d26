@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class NumberGuesser {
+
+	public static void main(String[] args) {
+		/*
+		do {
+			playOneGame();
+		} while (shouldPlayAgain());
+		*/
+		getUserResponseToGuess(20);
+	}
+	
+	public static void playOneGame(){
+		
+	}
+	public static boolean shouldPlayAgain(){
+		Scanner input = new Scanner(System.in); 
+		
+		System.out.print("Play again? (y/n) ");
+        char playAgain = input.next().charAt(0);
+        if (playAgain == 'y'){
+        	return true;
+        }
+        else {
+        	return false;
+        }		
+	}
+	public static void getUserResponseToGuess(int guess){
+		Scanner input = new Scanner(System.in);
+		this.guess = guess;
+		
+		System.out.print("Is it" + this.guess + "? (h/l/c)");
+		
+		char userResponse = input.next().charAt(0);
+		if (userResponse == 'h'){
+			return 'h';
+		}
+		else if (userResponse == 'l'){
+			return 'l';
+		}
+		else if (userResponse =='c'){
+			return 'c';
+		}
+	}
+	public static void getMidpoint(int low, int high){
+		
+	}
+	public static void getRandomMidpoint(int low, int high){
+		
+	}
+	
+}

@@ -1,0 +1,31 @@
+Greetings CS131A,
+
+(1)  I have posted on hills new wostnotes based on the lectures last night.
+
+(2) Started looking at your quizzes from last night. Here are the questions:
+
+    http://fog.ccsf.edu/~uwostner/myquiz02.html
+
+(3)   Learning loops takes time. Read your lecture notes, wostnotes, and the quiz questions, again.  
+
+(4)   The book reading assignments are here:  http://fog.ccsf.edu/~uwostner/reading/
+
+(4)   Get your python interpreter shell out on hills, on your own machine, and then practice, practice, and practice some more.
+
+    $ python3
+        >>> practicepracticepractice
+    
+
+(5) This week I will mail out a couple of assignments.  You will always have one week to complete smaller assignments,
+    and two weeks for bigger assignments.
+
+(6) You can start creating a web page on hills now, following how we did that in class. 
+
+
+It’s a pleasure teaching you all!
+
+Keep up the good work.
+
+Ulf
+
+

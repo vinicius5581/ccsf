@@ -1,0 +1,33 @@
+
+Good job on LAB04 and LAB05.  Not easy.
+
+Since these are longer labs I will accept solutions for full credit until 5 pm today, Tuesday.
+
+And, after we discussed some of the solutions in class, I will still accept LAB04 and LAB05 for 50% credit until Thursday Feb 26 at 11:59pm.
+
+I drop the lowest lab score and the lowest quiz score when adding up the scores for the midterm grade.
+
+I drop the two lowest lab scores and the two lowest quiz scores when adding up the scores for the course grade.
+
+There are more labs around the corner, and some of them will be quite a bit easier too.
+
+
+If you had difficulties reading the dictionary files etc, make sure to read again:
+
+    wostnotes/wostnotes06/myfilereader.py
+
+    wostnotes/wostnotes08/wordy/wordreader.py
+
+    wostnotes/wostnotes09/mywordreader.py
+
+
+Also, try to read our notes and these extra exercises before the quiz today:
+
+wostnotes/EXERCISES03
+├── practice_lists_and_sets.txt
+├── practice_modifying_lists_and_sets.txt
+├── practice_strings.txt
+├── practice_tuples.txt
+└── README.txt
+
+

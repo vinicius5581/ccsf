@@ -1,4 +1,4 @@
-replace this line with a comment giving your name; I do *not* want your id, assignment number, etc.- just your name as it appears in Insight.
+/* Osmar Santana */
 
 \W    /* enable warnings! */
 

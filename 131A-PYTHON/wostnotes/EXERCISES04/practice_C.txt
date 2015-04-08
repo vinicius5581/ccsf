@@ -1,0 +1,69 @@
+Greetings CS131A Students,
+
+Here is some interative shell practice. Good preparation for the quiz.
+
+(1) Print this file.
+
+(2) Write down what you expect the answers to be.
+
+(3) Run each command at the shell.
+
+    $ python3
+    >>> 3 * 'practice '
+
+
+
+# The format method for str objects.
+
+# We have only learned a little bit about that so far.
+
+
+
+
+>>> stuff ={'hello': 'world', 'good' : 'day'}
+
+
+
+>>> type(stuff)
+
+
+>>> 'hello' in stuff
+
+
+>>> 'day' in stuff
+
+
+
+
+>>> template = "good {good:}, {hello:}"
+
+
+
+>>> template.format(**stuff)
+
+
+
+
+
+
+
+>>> template = "{:0.4f}"
+
+
+>>> x = 1/6
+
+
+
+>>> print(template.format(x))
+
+
+
+>>> "pin = {:06d}".format(1234)
+
+
+
+
+>>> "n = {: 6d}".format(12)
+
+
+

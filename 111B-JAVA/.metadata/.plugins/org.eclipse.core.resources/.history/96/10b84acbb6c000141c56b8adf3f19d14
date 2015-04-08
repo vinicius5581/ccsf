@@ -1,0 +1,41 @@
+
+public class MyCircleTester {
+
+	public static void main(String[] args) {
+		   MyCircle c1 = new MyCircle();
+		   MyCircle c2 = new MyCircle();
+		   MyCircle c3 = new MyCircle();
+		   
+		   c1.setX(2);
+		   c1.setY(4);
+		   c1.setRadius(4);
+		   
+		   c2.setX(5);
+		   c2.setY(7);
+		   c2.setRadius(5);
+		   
+		   c3.setX(10);
+		   c3.setY(10);
+		   c3.setRadius(1);
+		   
+		   System.out.println(c1.getX());
+		   System.out.println(c1.getY());
+		   System.out.println(c1.getRadius());
+		   System.out.println(c1.getArea());
+		   
+		   System.out.println(c2.getX());
+		   System.out.println(c2.getY());
+		   System.out.println(c2.getRadius());
+		   System.out.println(c2.getArea());
+		   
+		   System.out.println(c3.getX());
+		   System.out.println(c3.getY());
+		   System.out.println(c3.getRadius());
+		   System.out.println(c3.getArea());
+		   
+		   System.out.println(c1.doesOverlap(c3));
+		   
+		   
+	}
+
+}

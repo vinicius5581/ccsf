@@ -1,0 +1,31 @@
+Subject: CS131A:MESSAGE06: quiz04 results, more wostnotes, etc
+
+Correction: The email I sent out said you're working on LAB01.
+            Make that LAB03, and I'm preparing LAB04 and LAB05.
+
+
+Greetings Pythonistas,
+
+Good scores overall.  Your results are posted as usual at
+
+http://fog.ccsf.edu/~uwostner/scores/
+
+It takes a while to understand the while loops.  No wonder they are called while loops. 
+
+http://fog.ccsf.edu/~uwostner/myquiz04.html
+
+The sessions at the computer last night by Michail and by Nehemiah are now wostnotes11, after some editing.  Study those. 
+
+    wostnotes/wostnotes11
+
+You are all working on LAB03 now.  I will let you know how to submit your work, probably by the weekend.  The deadline is Monday evening.
+
+I am preparing LAB04 and LAB05 and will let you know when you can start working on them.
+
+Good luck with the programming,
+
+Ulf
+
+
+
+

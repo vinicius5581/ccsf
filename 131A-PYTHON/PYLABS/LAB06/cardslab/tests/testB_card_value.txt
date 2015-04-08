@@ -1,0 +1,34 @@
+Now, the values of the cards in some card games.
+
+>>> import cards
+
+For practice, we specify that the value function is from our basic cards module.
+
+>>> cards.value('10H')
+10
+>>> cards.value('JS')
+11
+>>> cards.value('2D')
+2
+
+Now for Ace cards.
+
+By default, we count Ace as acehigh
+>>> cards.value('AD')
+14
+
+>>> cards.value('AD', acehigh=True)
+14
+
+>>> cards.value('AD', acehigh=False)
+1
+
+>>> cards.value('AH', acehigh=True) > cards.value('KD')
+True
+
+Compare the values of some cards.
+
+>>> cards.value('AH', acehigh=False) < cards.value('2D')
+True
+
+

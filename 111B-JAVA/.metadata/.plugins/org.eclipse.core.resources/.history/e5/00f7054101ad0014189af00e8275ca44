@@ -1,0 +1,137 @@
+import java.util.*;
+
+/**
+ * 
+ * @author Vinicius Santana
+ * This program will try to guess the number that you input
+ * based on hints given by the user.
+ * 
+ */
+public class NumberGuesser {
+	public static void main(String[] args) {
+		do {
+			playOneGame();
+		} while (shouldPlayAgain());	
+	}
+	
+	/**
+	 */
+	public static void playOneGame(){
+		int playerNumber = playerNumber();			
+		int low = 0;
+		int high = 100;		
+		int compGuess = getMidpoint(low,high);
+				
+		getUserResponseToGuess(compGuess);
+		
+		while (playerNumber != compGuess)
+		{
+			compGuess = getMidpoint(low, high);
+			if (playerNumber == compGuess)
+			{
+				System.out.println("Your number is " + playerNumber);
+			}
+			else if (compGuess > high){
+				low = tanto;
+				high = tanto;
+			}
+			else{
+				
+			}
+		}
+	}
+		
+	/**
+	 * Ask the user for a random number.
+	 * @return
+	 */
+	public static int playerNumber(){
+		int playerNumber;
+		
+		Scanner keyboard = new Scanner(System.in); 
+		System.out.println("Guess a number between 1 and 100");
+		playerNumber = keyboard.nextInt();
+		return playerNumber;
+	}
+	
+	
+	/**
+	 * This function should accept the value guessed by the computer
+	 * and ask the user if its h(higher), l(lower) or c(correct).
+	 * @param guess
+	 * @return
+	 */
+	public static char getUserResponseToGuess(int guess){
+		Scanner input = new Scanner(System.in);		
+		char userResponse = 'x';			
+		System.out.print("Is it " + guess + "? (h/l/c): ");
+		while((userResponse != 'h' && userResponse != 'l' && userResponse != 'c')){				
+			userResponse = input.next().charAt(0);
+			if (userResponse == 'h' || userResponse == 'l' || userResponse =='c'){
+				break;							
+			}
+			else{
+				System.out.print("Is it " + guess + "? (h/l/c): ");
+			}
+		}
+		return userResponse;	
+	}
+	
+	/**
+	 * This function should accept two integers 
+	 * and it should return the midpoint of the two integers.
+	 * @param low
+	 * @param high
+	 */
+	public static int getMidpoint(int low, int high){
+		int midPoint = (low + high)/2;
+		return midPoint;
+	}
+	
+	/**
+	 * This function should accept two arguments
+	 * and it should return a random number in between the low and high arguments. 
+	 * @param low
+	 * @param high
+	 */
+	public static int getRandomMidpoint(int low, int high){
+		Random rand = new Random();
+		int randomNum = rand.nextInt((high - low) + 1) + low;
+	    return randomNum;
+	}
+	
+	/**
+	 * This function should ask the user if he/she wants to play another game
+	 * @return
+	 */
+	public static boolean shouldPlayAgain(){
+		Scanner input = new Scanner(System.in); 
+		char playAgain = 'x';
+		int count = 1;
+		boolean result = false;
+		
+        while (playAgain != 'y' || playAgain != 'n')
+        {
+        	count += 1;
+        	if (count == 1)
+        	{
+        		System.out.print("Play again? (y/n) ");
+        	}
+        	else
+        	{
+        		System.out.println("Please type 'y' to play another game or 'n' to exit!");
+        	}
+            playAgain = input.next().charAt(0);
+        }
+        if(playAgain == 'y')
+        {
+        	result = true;
+        }
+        else if (playAgain == 'f')
+        {
+        	result = false;
+        }
+        return result;
+    }
+	
+}

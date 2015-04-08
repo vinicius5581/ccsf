@@ -1,0 +1,43 @@
+
+public class MyCircle {
+	
+	double x;
+	double y;
+	double radius;
+	
+	void setX(double value){
+		this.x = value;
+	}
+	
+	double getX(){
+		return this.x;
+	}
+	
+	void setY(double value){
+		this.y = value;
+	}
+	
+	double getY(){
+		return this.y;
+	}
+	
+	void setRadius(double value){
+		this.radius = value; 
+	}
+	
+	double getRadius(){
+		return this.radius;
+	}
+	
+	double calculateArea(){
+		return radius * radius * Math.PI;
+	}
+	
+	double getArea(){
+		return calculateArea;
+	}
+	
+	boolean doesOverlap(MyCircle otherCircle){
+		
+	}
+}

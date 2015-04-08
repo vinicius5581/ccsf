@@ -1,0 +1,45 @@
+>>> from phonenumbers import phone_basic, phone_better, phone_best, phone
+
+The basic example.
+
+>>> phone_basic('642', '6000', '510')
+'(510) 642-6000'
+
+>>> phone_better('239', '3000')
+'(415) 239-3000'
+
+We can be more explicit and use a keyword
+
+>>> phone_better('642', '6000', areacode='510')
+'(510) 642-6000'
+
+If we don't remember what order the arguments were in the definition of phone, we can do
+
+>>> phone_better(areacode='123', number='7890', exchange='456')
+'(123) 456-7890'
+
+We can use periods in the phone number too.
+
+
+>>> phone_best('239', '3000', '608', useperiod=True)
+'608.239.3000'
+
+
+>>> phone_best('239', '3000', '608', useperiod=False)
+'(608) 239-3000'
+
+
+But the default is to not use periods.
+
+>>> phone_best('239', '3000', '608')
+'(608) 239-3000'
+
+
+>>> phone_best('239', '3000')
+'(415) 239-3000'
+
+>>> phone('239', '3000')
+'(415) 239-3000'
+
+>>> phone('239', '3000', useperiod=True)
+'415.239.3000'

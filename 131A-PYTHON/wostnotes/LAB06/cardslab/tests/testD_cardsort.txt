@@ -1,0 +1,58 @@
+>>> from cards import RANKS, SUITS
+
+>>> SUITS
+['C', 'D', 'H', 'S']
+
+>>> RANKS
+['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+
+
+Here are ten cards in random order.
+
+>>> mytencards = ['QH', 'QD', '3D', '10H', '7H', '9H', '4H', 'QS', 'JC', '4S']
+
+
+>>> from cardsort import sorted_alphabetically
+
+------------------------------------------------------------------
+Sorting a hand of cards. 
+
+It can be done alphabetically, rank-first, or suit first.
+------------------------------------------------------------------
+
+
+First, we just sort the cards alphabetically.
+
+That's the default for the built-in sorted function.
+
+>>> sorted(mytencards)
+['10H', '3D', '4H', '4S', '7H', '9H', 'JC', 'QD', 'QH', 'QS']
+
+>>> sorted_alphabetically(mytencards)
+['10H', '3D', '4H', '4S', '7H', '9H', 'JC', 'QD', 'QH', 'QS']
+
+------------------------------------------------------------------
+
+Now, let's sort by rank first, and then suit.
+
+>>> from cardsort import sorted_by_rank
+
+Notice that the sort now understands the values of the ranks.
+For example, it understands that 10 comes before Jack, Queen, etc.
+
+>>> sorted_by_rank(mytencards)
+['3D', '4H', '4S', '7H', '9H', '10H', 'JC', 'QD', 'QH', 'QS']
+
+------------------------------------------------------------------
+
+Finally, sort mytencard by suit first, and then by rank
+
+Remember the order of the suits.
+
+>>> SUITS
+['C', 'D', 'H', 'S']
+
+>>> from cardsort import sorted_by_suit
+
+>>> sorted_by_suit(mytencards)
+['JC', '3D', 'QD', '4H', '7H', '9H', '10H', 'QH', '4S', 'QS']

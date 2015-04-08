@@ -1,0 +1,21 @@
+>>> from hailstones import stones
+
+Start with a nice even seed.
+
+>>> seed = 32
+>>> stones(seed)
+[32, 16, 8, 4, 2, 1]
+
+>>> stones(5)
+[5, 16, 8, 4, 2, 1]
+
+
+What if the seed is 1 ?  Should stop right away.
+
+>>> stones(1)
+[1]
+
+Now one of those seeds that goes on for a while.
+
+>>> stones(7)
+[7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]

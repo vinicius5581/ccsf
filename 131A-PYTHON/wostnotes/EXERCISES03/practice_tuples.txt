@@ -1,0 +1,65 @@
+
+
+
+Practice tuples, like pairs (x, y) and triples (x,y,z).
+
+>>> e = (20, 30)
+
+>>> type(e)
+
+>>> f = [40, 50]
+
+>>> type(f)
+
+>>> e[0]
+
+
+>>> f[0]
+
+
+>>> f[0] = 22
+
+>>> f
+
+
+Remember that tuples are immutable (can not be changed).
+That explains the result below.
+
+>>> e[0] = 33
+
+
+>>> e
+
+
+Here we build a list of pairs:
+
+>>> pairlist = list()
+
+>>> for n in range(1, 7):
+...     pair = (n, n**2)
+...     pairlist.append(pair)
+...
+
+>>> pairlist
+
+
+>>> pairlist[0]
+
+
+
+And here we build a set of pairs:
+
+>>> pairset = set()
+>>> for n in range(1, 7):
+...     pair = (n, n**2)
+...     pairset.add(pair)
+...
+
+>>> pairset
+
+
+Remember there is no order to sets which explains the result below.
+
+>>> pairset[0]
+
+

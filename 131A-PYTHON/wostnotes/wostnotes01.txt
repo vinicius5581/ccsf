@@ -1,0 +1,202 @@
+>>> 'hello'
+
+>>> 3+4
+
+>>> x = 3
+
+>>> x
+
+>>> x**2
+
+>>> a, b = 3, 4
+
+>>> a,b
+
+>>> a
+
+>>> a**2+b**2
+
+>>> a**2+b**2 == 25
+
+>>> a**2+b**2 != 25
+
+>>> type(3)
+
+>>> type(True)
+
+>>> x = 3.14
+
+>>> type(x)
+
+>>> 7/4
+
+>>> 7//4
+
+>>> 365//7
+
+>>> 23//6
+
+>>> 'if you divide 23 by 6 what is the remainder?'
+
+>>> 'we need to calculate 23 mod 6 by doing:'
+
+>>> 23 % 6
+
+>>> 365//7
+
+>>> 365 % 7
+
+>>> 52*7+1 == 365
+
+>>> divmod(365, 7)
+
+>>> weeks, days  = divmod(365, 7)
+
+>>> weeks
+
+>>> days
+
+>>> s = "python"
+
+>>> type(s)
+
+>>> len(s)
+
+>>> g = "good"
+
+>>> len(g)
+
+>>> s+g
+
+>>> v = 3*'very'
+
+>>> v
+
+>>> space = " "
+
+>>> p + space + v + space + g
+
+>>> s + space + v + space + g
+
+>>> line = 3 * " - "
+
+>>> line
+
+>>> s
+
+>>> 'access invidiual elements in str'
+>>> s[0]
+
+>>> s[5]
+
+>>> s[-1]
+
+>>> s[-2]
+
+>>> 'slices of strings'
+
+>>> s[2:4]
+
+>>> s[1:4]
+
+>>> A,B = s[0:2], s[2:5]
+
+>>> A,B
+
+>>> '37' + '5'
+
+>>> int('37')
+
+>>> int('37') + int('5')
+
+>>> 'types: int, float, str, bool, and now list and dict'
+
+>>> mylist = [3, 4, 5, 6]
+
+>>> len(mylist)
+
+>>> mylist[-1]
+
+>>> mylist[1]
+
+>>> mylist[0]
+
+>>> mylist[1:3]
+
+>>> mylist + 10
+
+>>> mylist + [10, 20, 30]
+
+>>> mylist + [99]
+
+>>> mylist = mylist +[88, 99]
+
+
+>>> mylist
+
+
+>>> 'other ways ... '
+
+
+>>> mylist.append(111)
+
+>>> mylist
+
+
+>>> 'more technical stuff...'
+
+>>> mylist[:2]
+
+>>> mylist[0:2]
+
+>>> mylist[4:]
+
+>>> mylist[::]
+
+>>> mylist[:]
+
+>>> mylist[::2]
+
+>>> mylist[::-1]
+
+>>> 'we got our list reversed due to step of size -1 '
+
+>>> s
+
+>>> p = "python"
+
+>>> p[::-1]
+
+>>> A = (1, 2, 3)
+
+>>> cities = ['SF', '!LA', 'Paris']
+
+>>> cities.append('Basel')
+
+>>> cities
+
+>>> pops = [ 1, 10, 15, 2]
+
+>>> zip(cities, pops)
+
+>>> 'zip those two lists together and return it as a list'
+
+>>> list(zip(cities, pops))
+
+>>> list(myzip)
+
+>>> for item in mylist: print(item)
+
+>>> myzip = zip(cities, pops)
+
+>>> 'here is loop, a so-called for-loop'
+
+>>> for item in myzip: print(item)
+
+>>> list(zip(cities, pops))
+
+>>> myzip = zip(['a', 'b', 'c'], [10, 20, 30])
+
+>>> for item in myzip: print(item)
+
+        

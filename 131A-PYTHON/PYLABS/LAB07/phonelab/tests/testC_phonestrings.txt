@@ -1,0 +1,36 @@
+>>> from phonestrings import phone2string, phone
+
+
+
+>>> phone2string('H1L.BEX.FO0D')
+'(H1L) BEX-FO0D'
+
+
+>>> phone2string('H1L.BEX.WOODD')
+'(H1L) BEX-WOODD'
+
+>>> phone2string('N0T.T00.G00D')
+'(N0T) T00-G00D'
+
+>>> phone2string('H1L.S00.G00D')
+'(H1L) S00-G00D'
+
+
+>>> phone('415.239.3000')
+'(415) 239-3000'
+
+
+>>> phone('H1L.BEX.FO0D')
+'(415) 239-3603'
+
+>>> phone('H1L.S00.G00D')
+'(415) 700-4003'
+
+>>> phone('YOU.GOT.M1LK')
+'(968) 468-6155'
+
+
+
+
+
+

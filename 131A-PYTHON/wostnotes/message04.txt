@@ -1,0 +1,27 @@
+Subject: CS131A:MESSAGE04: QUIZ03 and wostnotes
+
+
+Greetings CS131A Students,
+
+It's been fun to finger you on hills, and to see your cool webpages showing up at 
+
+    http://hills.ccsf.edu/~uwostner/cgi-bin/homepages.py
+
+We have our usual weekly quiz at 6:00pm.  As usual review your notes and the wostnotes in detail.
+
+The reading assignments are as usual at 
+
+    http://fog.ccsf.edu/~uwostner/reading/
+
+The class home page is still at 
+
+    http://fog.ccsf.edu/~uwostner
+
+No big surprises on the quiz, just testing your understanding of what we have covered so far.
+
+Ulf
+
+
+P.S.  I have also added wostnotes08.  Not asking you to learn the code in there now, 
+but it does review how functions are defined and some string and list methods 
+and functions.  If you take a look at it before class it can be easier to follow the lecture about it.

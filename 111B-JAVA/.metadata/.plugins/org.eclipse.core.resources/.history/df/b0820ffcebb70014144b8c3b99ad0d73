@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class HighScores {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	/**
+	 * Ask the user for five names and five scores
+	 * @return
+	 */
+	public static int[] playersNamesScoresInput(){
+		
+		ArrayList<Integer> x = new ArrayList<Integer>();
+		ArrayList<String> s = new ArrayList<String>();
+		for(int i=0;i<5;i++){
+			Scanner input = new Scanner(System.in);
+			String[] names = 
+		}		
+		
+		
+		
+		
+		
+		
+		
+		Scanner input = new Scanner(System.in);
+	    int[] hand = new int[5];
+	    System.out.println("Enter five numeric cards, no face cards. Use 2-9.");
+	    for(int i=0;i<5;i++){	    	
+	    	System.out.print("Card "+(i+1)+": ");
+	    	hand[i] = input.nextInt();
+	    }	
+		return hand;
+	}	
+
+}

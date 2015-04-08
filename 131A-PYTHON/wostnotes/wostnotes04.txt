@@ -1,0 +1,74 @@
+>>> 'range with a step of size 2'
+>>> t = range(5, 12, 2)
+
+>>> list(t)
+
+>>> u = range(12, 1, -3)
+>>> list(u)
+
+>>> for i in u: print(i, 2*i)
+
+>>> 'TURNING STRINGS INTO LISTS'
+>>> 'cast a string as a list'
+>>> s = "CDHS"
+>>> type(s)
+
+>>> t = list(s)
+>>> t
+
+>>> 'we casted a string as list, and it worked! '
+
+>>> u = "2 3 4 5 6 7 8 9 10 J Q K A"
+>>> list(u)
+
+>>> 'not bad, but there is better'
+
+>>> u
+
+>>>u.split()
+
+>>> 'that gave us a nice list'
+
+>>> 'what other methods are available for a string like u'
+>>> name = '   Elon    Musk   '
+>>> name.strip()
+
+>>> w = 'ulf:wostner:123:berkeley:python'
+>>> 'we can split that colon-separated string'
+>>> w.split(':')
+
+>>> help(w.split)
+>>> 'you can join a list of strings to get one long string'
+
+>>> x = ['A', 'BC', 'DEF']
+>>> type(x)
+
+>>> JOINER = ','
+>>> JOINER.join(x)
+
+>>> JOINER=':'
+>>> JOINER.join(x)
+
+>>> 'using an empty string'
+>>> JOINER = ''
+>>> JOINER.join(x)
+
+>>> 'using a space'
+>>> JOINER = ' '
+>>> JOINER.join(x)
+
+>>> 'tabs are often used too'
+>>> JOINER = "\t"
+>>> z = JOINER.join(x)
+>>> z
+
+>>> print(z)
+
+
+>>> JOINER = "\n"
+>>> v = JOINER.join(x)
+>>> v
+
+>>> print(v)
+
+

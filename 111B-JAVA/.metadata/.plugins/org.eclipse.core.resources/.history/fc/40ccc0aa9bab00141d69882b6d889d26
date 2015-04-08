@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class NumberGuesser {
+
+	public static void main(String[] args) {
+		/*
+		do {
+			playOneGame();
+		} while (shouldPlayAgain());
+		*/
+	}
+	
+	public static void playOneGame(){
+		
+	}
+	public static boolean shouldPlayAgain(){
+		return true;
+	}
+	public static void getUserResponseToGuess(int guess){
+		
+	}
+	public static void getMidpoint(int low, int high){
+		
+	}
+	public static void getRandomMidpoint(int low, int high){
+		
+	}
+	
+}

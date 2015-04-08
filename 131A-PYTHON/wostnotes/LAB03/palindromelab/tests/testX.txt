@@ -1,0 +1,12 @@
+Some extra tests.
+
+>>> from sentences import stripper
+
+>>> stripper('go 4 it !!')
+'goit'
+
+>>> stripper('hello 2 46? !??! world ,??')
+'helloworld'
+
+>>> stripper('this has a tab \t and period . colon : and semicolon ;')
+'thishasatabandperiodcolonandsemicolon'

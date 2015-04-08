@@ -1,0 +1,71 @@
+>>> from hailstones import stones
+>>> import height
+>>> import length
+
+---------------------------------
+Look at a nice little seed. 
+The stones go up and then down down.
+---------------------------------
+
+>>> seed = 5
+
+>>> stones(seed)
+[5, 16, 8, 4, 2, 1]
+
+>>> height.measure(seed)
+16
+
+>>> length.measure(seed)
+6
+
+---------------------------------
+Here is a seed that hits an air pocket
+and just keeps dropping and dropping.
+---------------------------------
+
+>>> seed = 256
+>>> stones(seed)
+[256, 128, 64, 32, 16, 8, 4, 2, 1]
+
+>>> length.measure(seed)
+9
+
+>>> height.measure(seed)
+256
+
+---------------------------------
+If the seed is 1 the stones process already stopped.
+---------------------------------
+
+>>> seed = 1
+>>> stones(seed)
+[1]
+
+>>> length.measure(seed)
+1
+>>> height.measure(seed)
+1
+
+---------------------------------
+Here is a more a surprising seed.
+---------------------------------
+
+>>> seed = 27
+
+That seed gives so many stones we skip some in the list below.
+
+>>> stones(seed)
+[27, 82, 41, 124,..., 9232,..., 8, 4, 2, 1]
+
+The seed was not big but the stones reached an amazing height.
+
+>>> height.measure(seed)
+9232
+
+The list of stones actually has 112 stones.
+Not bad for a small seed like 27.
+
+>>> length.measure(seed)
+112
+
+

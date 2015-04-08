@@ -1,0 +1,59 @@
+Greetings CS131A,
+
+This LAB01 is about using your Unix and Pico editor skills to give people useful info when they finger you on hills.
+
+Since you already have taken the basic Unix workshop and Pico editor (or some other editor on hills), this will take about ONE HOUR to complete. 
+
+Deadline: Complete before next lecture, so before Quiz03 on Tuesday.
+
+For a couple of examples, you can finger me, or Tim in our class with
+
+$ finger uwostner
+    
+$ finger tdillar3
+
+Step 1:  Use the chfn command (change finger command) on hills, and answer the questions there. Main thing is your name, and for office 
+just enter your ccsf email address.  Skip phone numbers.   
+
+Then, verify that it looks OK using
+
+$ finger -p yourlognamehere
+
+You can compare yours to what you see when doing
+
+$ finger -p uwostner
+$ finger -p tdillar3
+
+
+Step 2:  Create a file named .project where you put ONE LINE ONLY describing your current project, like maybe what classes your are  taking.
+
+That line should now show up when you do 
+
+$ finger yourlognamehere
+
+Step 3:  Create a longer file named .plan where you can write more information about your work, your interests, etc.  Again, for examples look at 
+
+$ finger uwostner
+    
+$ finger tdillar3
+    
+
+Step 4:  IMPORTANT.   You can see your own finger information.  But can other people on hills see it?  You need to have permissions like Tim’s below.
+His homer has x permission for all, and his .project and .plan files have r for all.
+
+$ ls -dl ~tdillar3
+drwx--x--x 21 tdillar3 b20147 4096 Jan 28 20:29 /students/tdillar3/
+
+$ ls -l ~tdillar3/.project
+-rw-r--r-- 1 tdillar3 b20147 75 Sep 20 20:25 /students/tdillar3/.project
+
+$ ls -l ~tdillar3/.plan
+-rw-r--r-- 1 tdillar3 b20147 283 Sep 24 10:47 /students/tdillar3/.plan
+
+Step 5:  Reply to this email to let me know that you have finished the assignment.  Tip:  Ask someone else to finger you first.  If the permissions are OK they can then see the info in your .project and .plan. 
+
+( Next LAB assignment will be to create a very basic home page on hills, see wostnotes07. )
+
+Good luck everybody, looking forward to checking your info out on hills!
+
+Ulf

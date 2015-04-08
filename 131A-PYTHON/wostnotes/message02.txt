@@ -1,0 +1,19 @@
+To: cs131a
+Subject: CS131A:MESSAGE02: reading and notes for quiz02
+
+Greetings CS131A,
+
+I added more sections to read in our textbook at the usual site:
+    
+    http://fog.ccsf.edu/~uwostner/reading/
+
+Also, added notes from the lecture this week in the usual directory on hills:
+
+    ~uwostner/wostnotes/
+
+To get ready for QUIZ02 starting at 6:00pm on Tuesday by reading the book, your notes, and the wostnotes.  Always have the python3 interactive shell running so you can practice the commands, the way we do in class.
+
+Keep up the good work everybody,
+
+Ulf
+

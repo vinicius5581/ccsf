@@ -1,0 +1,77 @@
+Greetings CS131A,
+
+This is LAB02, with more Unix commands practice, including downloading or uploading an image file.
+
+DEADLINE: Wednesday Feb 4.
+
+STEP 1: 
+Create a directory public_html and make that directory x for other.
+
+STEP 2:
+Inside public_html create a file with name index.html
+and put the html code below into that file, like we did in class.
+Make your index.html readable by other.
+
+STEP 3:
+Check that you can view it using the URL
+
+    http://hills.ccsf.edu/~emusk01  ( for Elon Musk, but user your own login name)
+
+STEP 4:
+
+Create a directory ~/public_html/images
+and make it x for other.
+
+STEP 5:
+Find some suitable image somewhere and download it into that directory,
+so now you would have a file (with some file extension like png, gif, jpg, … ).
+
+There are a billion images on the web, or you might one of your own handy ;)
+
+    ~/public_html/images/yourimagehere.png
+
+
+STEP 6:
+Give that image file the permission r for other.
+
+STEP 7:
+View your webpage in a web browser again to see that the image also looks OK.
+
+STEP 8:
+Reply to this email when your page, inlcuding the image, is working.
+
+Deadline: Complete by Wednesday Feb 4.
+
+
+There are hundreds of good basic html tutorials on the web
+where you can learn how to add images, lists, tables, etc to your page.
+
+Later in the course we will write some python programs that create interesting hills web pages.
+
+Good luck,
+
+Ulf
+
+----------- html code below this line for your index.html ------------------
+
+<html>
+    <head>
+        <title>
+            Your title for the page here. Shows at top of web browser.
+        </title>
+    </head>
+
+    <body>
+        <h1>
+            Welcome to the hills home page for Your Name Here
+        </h1>
+        <p>
+        Here is some text about myself or the world.
+        </p>
+
+        <img src="images/yourimagehere.png"
+            alt="My image. You get the picture!" />
+    
+    <hr/>
+    </body>
+</html>

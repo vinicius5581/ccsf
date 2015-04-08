@@ -1,0 +1,120 @@
+Copyright (c)2015 Ulf Wostner <wostner@cyberprof.com>. All rights reserved.
+Do not post or distribute in any form.
+
+CS131A:Python Programming, Spring 2015.
+
+Based on interactive shell session with Jennifer at the computer.
+
+
+Create a list of strings that are numbers.
+
+>>> mylist = list()
+>>> for n in range(0, 15):
+...    mylist.append(str(n))
+
+>>> mylist
+
+Use the built-in sorted function. 
+Compares the strings in mylist when sorting
+the way one normally sorts words.
+
+>>> sorted(mylist)
+
+Did mylist itself change from the sorting?
+
+>>> mylist
+
+Now, let's ask sorted to treat the strings in mylist 
+as int objects, not str objects.
+
+Now the order is more natural for numbers, but it's still a list of str objects.
+
+>>> sorted(mylist, key=int)
+
+Here is another example.
+
+>>> otherlist = ['9', '4', '43', '403']
+>>> otherlist
+
+>>> sorted(otherlist)
+
+>>> otherlist
+
+>>> sorted(otherlist, key=int)
+
+
+>>> lognames = ['emusk', 'tcook', 'scook', 'bobama']
+>>> sorted(lognames)
+>>> s = 'tcook'
+>>> s[1:]
+>>> s[1:]+s[0]
+
+
+>>> def lastname(logname):
+...     return logname[1:]
+
+def firstname(logname):
+    return logname[0]
+
+>>> firstname('tcook')
+
+>>> lastname('tcook')
+
+
+>>> sorted(lognames, key=lastname)
+
+>>> def nametuple(logname):
+...     return (lastname(logname), firstname(logname))
+
+>>> nametuple('tcook')
+
+>>> sorted(lognames, key=nametuple)
+
+>>> lognames
+
+
+>>> newnames = ['london', 'basel', 'ny', 'sf', 'san diego']
+
+>>> sorted(newnames, key=len)
+
+
+>>> 'A' < 'B'
+
+>>> 'a' < 'A'
+
+>>> ord('a') < ord('A')
+
+>>> '5' < 'a'
+
+>>> ord('5')
+
+
+>>> for n in range(32, 128):
+...     print(n, chr(n))
+
+
+>>> for n in range(128, 256):
+...     print(n, chr(n))
+
+Look up ASCII-numbers and Unicode in wikipedia or our textbook.
+
+
+>>> ram = chr(32650)
+
+>>> ram
+
+>>> ord('羊')
+
+>>> rat = '鼠'
+>>> rat
+
+>>> ord(rat)
+
+
+>>> '\N{GREEK SMALL LETTER ALPHA}'
+
+
+>>> "\N{LATIN SMALL LETTER N WITH TILDE}"
+
+
+

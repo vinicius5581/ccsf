@@ -1,0 +1,66 @@
+CS131A Python Programming Spring 2015   
+Copyright (c)2015 Ulf Wostner <wostner@cyberprof.com>. All rights reserved.
+Do not post or distribute in any form.
+
+
+
+>>> from words import is_word
+>>> from words import wordset
+
+
+>>> is_word('Ada')
+True
+
+>>> is_word('Turing')
+True
+
+Not case-sensitive.
+
+>>> is_word('mESsY'), is_word('messy')
+(True, True)
+
+We still like palindromes (until we get into 'rewords').
+
+>>> is_word('radar')
+True
+
+
+
+Our wordset have all words from the hills dictionary, 
+but we converted them to lower-case before adding them to our wordset, so
+
+These tests might take time to run, depending on how efficient your code is.
+
+>>> WORDS6 = wordset(6)
+
+>>> 'Turing' in WORDS6
+False
+
+>>> 'turing' in WORDS6
+True
+
+
+>>> WORDS8 = wordset(8)
+
+>>> 'hand-fed' in WORDS8
+True
+
+>>> 'aromatic' in WORDS8
+True
+
+
+>>> type(WORDS8)
+<class 'set'>
+
+
+How many words of length eight?
+
+>>> len(WORDS8)
+60533
+
+>>> smallset = {'evaluate', 'analysis', 'capacity'}
+
+>>> smallset.issubset(WORDS8)
+True
+
+

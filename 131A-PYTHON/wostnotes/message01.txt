@@ -1,0 +1,77 @@
+Greetings Python Students,
+
+This is the first message to CS131A. 
+
+It was good to meet you all in class.
+
+Some information and reminders:
+
+(1) CLASS HOME PAGE:  http://fog.ccsf.edu/~uwostner
+    
+    That page gets updated often. Find information about almost everything there.
+
+(2) WOSTNOTES:
+
+    On hills there is a directory that you can enter using the cd command,
+    list the files there, and read the notes, messages etc that get added there.
+
+     The directory is 
+
+        /users/uwostner/wostnotes/
+
+        ~uwostner/wostnotes
+
+
+(3) READING:
+
+    To help you read and connect the book material with our lectures,
+    I have created an "annotated" table of contents for the book.
+    The blue colored sections you should read.  Not so many yet, but it will grow each week.
+    The small text items are comments that I make about some of the sections.
+   
+    http://fog.ccsf.edu/~uwostner/reading
+
+    We will refer to that file every lecture in the future.
+
+(4) INTERACTIVE SHELL SESSION:
+
+    In class we worked with the interactive python shell, entering command after command.
+    The very best python activity for you right now is to review all those commands,
+    and try to PREDICT the output in each case. To make that easier the first time
+    I have created a file with those commands.  
+
+    Study like this:  
+ 
+       In each case write down your PREDICTION of what the output would be.
+        Like for 
+        >>> 3**2
+        
+        You expect the output 9, right.
+
+        Each time VERIFY using the interactive python3 shell so see if you got the right answer!
+
+        It's a game, really, and it will teach you a lot.
+
+        The file is on hills.ccsf.edu in
+
+        ~uwostner/wostnotes/wostnotes01.txt
+
+  
+(5) DID YOU LOG IN YET?  LEARN THE BASICS OF UNIX and the PICO EDITOR?  Most of you already have
+
+    but we would like to have everybody onboard and succeed in the class.
+
+    You need those basics to get on hills and read those things in the wostnotes directory.
+    
+    Reminder: Our class home page has links to  ACRC with workshops or handouts, etc.
+
+
+Good luck everybody! 
+
+Ulf
+
+
+uwostner@ccsf.edu
+
+python@cyberprof.com
+    

@@ -1,0 +1,36 @@
+
+>>> from cards import deck
+
+>>> DECK = deck()
+
+>>> type(DECK)
+<class 'list'>
+
+>>> len(DECK)
+52
+
+>>> DECK[0]
+'2C'
+
+>>> DECK[-1]
+'AS'
+
+Here are those 52 cards but we are using dots to make the list look shorter.
+
+>>> DECK
+['2C', '3C', '4C', ..., 'KC', 'AC', '2D', ..., 'AS']
+
+>>> from cards import rank, suit
+
+>>> rank('QH')
+'Q'
+>>> rank('2S')
+'2'
+>>> rank('10D')
+'10'
+
+>>> suit('5C')
+'C'
+>>> suit('10D')
+'D'
+

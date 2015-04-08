@@ -1,0 +1,18 @@
+Subject:    CS131A:MESSAGE09: about QUIZ05 today (with Woody Allen quote)
+
+Greetings Pythonistas,
+
+
+Lot's of good work with your palindromelab programs, and you have been good sports working with the pine email program too!
+
+Today's quiz will be different:  No python or unix questions. Honest. So no need to study for that this time.  Use your time to get started on PYLAB04 and then PYLAB05.
+
+See you in class.  We will go over some of your programs and then cover new material.
+
+
+Ulf
+Famous quote ...
+
+    Woody Allen:  "Eighty percent of success is showing up."
+
+

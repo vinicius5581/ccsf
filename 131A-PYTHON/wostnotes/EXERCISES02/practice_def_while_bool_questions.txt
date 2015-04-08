@@ -1,0 +1,165 @@
+
+===== EXERCISES =====
+
+
+LAST NAME:              FIRST NAME:            SID4:
+
+INSTRUCTIONS: Write answers BELOW the lines, not on the side.
+INSTRUCTIONS: If the output is None, leave the output blank.
+
+===== int and bool =====
+
+>>> bool(5)
+
+>>> bool(0)
+
+>>> bool(5-5)
+
+>>> bool(5-6)
+
+
+
+--------------------
+
+>>> n = 3
+>>> while n > 0:
+...     print(n)
+...     n = n - 1
+
+
+
+
+
+--------------------
+
+>>> n = 3
+>>> while n > 0:
+...     n = n - 1
+...     print(n)
+
+
+
+
+
+--------------------
+
+>>> n = 3
+>>> while n > 0:
+...     print(n, end=":")
+...     n = n - 1
+
+
+--------------------
+
+>>> n = 3
+>>> while n > 0:
+...     n = n - 1
+...     print(n, end=":")
+
+
+--------------------
+
+>>> n = 3
+>>> while n >= 0:
+...     print(n, bool(n))
+...     n = n - 1
+
+
+
+
+
+--------------------
+
+>>> n = 3
+>>> while n >= 0:
+...     n = n - 1
+...     print(n, bool(n))
+
+
+
+
+
+
+===== str and bool =====
+
+>>> for s in ['go', '', 'niners']:
+...     print(s, len(s), bool(s))
+
+
+
+
+--------------------
+
+>>> template = "{:8s} {:2d} {}"
+>>> for s in ['go', '', 'niners']:
+...     print(template.format(s, len(s), bool(s)))
+
+
+
+
+--------------------
+
+>>> s = "abcde"
+
+>>> while True:
+...     triple = (s, len(s), bool(s))
+...     print(triple)
+...     if not s:
+...         break
+...     s = s[1:]
+
+
+
+
+
+
+
+--------------------
+
+>>> s = "smaller"
+>>> while s:
+...     print(s)
+...     s = s[:-1]
+
+
+
+
+
+
+
+
+--------------------
+
+===== list and bool =====
+
+>>> mylist = ['SF', 'LA', '', 'NYC']
+
+>>> while mylist:
+...     triple = (mylist, len(mylist), bool(mylist))
+...     print(triple)
+...     mylist = mylist[:-1]
+
+
+
+
+
+
+--------------------
+
+>>> n = 0
+>>> while True:
+...     ok = (n+2 == 6)
+...     print('n = ', n, ok)
+...     if ok:
+...         break
+...     n += 1
+
+
+
+
+
+--------------------
+
+===== end =====
+
+

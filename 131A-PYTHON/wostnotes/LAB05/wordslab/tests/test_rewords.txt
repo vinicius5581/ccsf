@@ -1,0 +1,43 @@
+>>> from rewords import is_reword, rewordset
+
+>>> is_reword('reward')
+True
+
+No palindromes allowed this time.
+
+>>> is_reword('rotor')
+False
+
+>>> is_reword('Pat')
+True
+
+>>> is_reword('turtle')
+False
+
+
+
+How many rewords of length eight?
+
+
+>>> REWORDS8 = rewordset(8)
+
+>>> type(REWORDS8)
+ <class 'set'>
+    
+>>> len(REWORDS8)
+10
+
+>>> 'desserts' in REWORDS8
+True
+
+
+>>> smallset = {'desserts', 'rewarder'}
+
+
+>>> smallset.issubset(REWORDS8)
+True
+
+
+
+
+

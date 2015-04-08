@@ -1,0 +1,34 @@
+Greetings Pythonistas,
+
+I see many of you on hills working away on the LAB assignments already!  Good going.
+
+
+Here is a summary of the assignments, with their DUE DATES etc.
+
+NOTE: SINCE LAB04 (not 05)  IS KIND OF LONG THAT ONE IS DUE LAST.
+
+
+LAB03   palindromelab   DUE DATE: Monday Feb 16 2015 at 11:59pm
+
+then,
+
+LAB05   wordslab        DUE DATE: Saturday Feb 21 2015 at 11:59pm
+
+
+and then, the longer lab, where you make as many of the tests work as you can.
+
+
+LAB04   hailstonelab    DUE DATE: Monday Feb 23 2015 at 11:59pm.
+
+
+Careful with the DUE DATEs.  You can still get up to half as many points the day after, but it depends.
+
+We are still working on the best way for you to actually submitting your labs to me, so hang on to them,
+and run those tests !
+
+Good luck everybody,
+
+Ulf
+
+
+

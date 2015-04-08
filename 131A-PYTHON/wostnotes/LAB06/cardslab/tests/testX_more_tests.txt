@@ -1,0 +1,10 @@
+>>> import cards
+
+>>> [ cards.value(card) for card in ['10C', 'JC', 'QH', 'KS', 'AD']]
+[10, 11, 12, 13, 14]
+
+>>> [ cards.value(card, acehigh=True) for card in ['10C', 'JC', 'QH', 'KS', 'AD']]
+[10, 11, 12, 13, 14]
+
+>>> [ cards.value(card, acehigh=False) for card in ['10C', 'JC', 'QH', 'KS', 'AD']]
+[10, 11, 12, 13, 1]

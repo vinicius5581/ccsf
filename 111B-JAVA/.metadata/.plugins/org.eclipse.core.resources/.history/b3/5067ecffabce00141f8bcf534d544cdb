@@ -1,0 +1,20 @@
+
+public class IntList {
+	
+	private int[] data; 
+	
+	
+	public IntList(){
+		data = new int[2000000];
+	}
+	
+	public void add(int value){}
+	
+	public int get(int index){
+		return 0;
+	}
+	
+	public int size(){
+		return 0;
+	}
+}

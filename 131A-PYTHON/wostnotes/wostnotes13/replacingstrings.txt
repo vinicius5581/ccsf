@@ -1,0 +1,104 @@
+
+How to get rid of non-alphabetic characters
+several different ways, actually
+
+>>> s = "1234xyz45abc647"
+
+>>> u = s.strip('0123456789')
+
+>>> s
+
+>>> s.replace('4', '')
+
+>>> s
+
+>>> t = s.replace('4','')
+
+>>> t
+
+>>> for c in "0123456789":
+...     s = s.replace(c, '')
+
+>>> s
+
+>>> s = 'hello23??there!!'
+
+For more info run help(str.translate)
+
+What do we want to get rid of ?
+
+>>> A = '0123456789?!.,:\\t\\n'
+>>> len(A)
+
+>>> B = 17 * ' '
+>>> len(B)
+
+>>> s.translate(A, B)
+
+
+>>> str.maketrans(A, B)
+
+
+Interesting, characters seem to have numbers!
+
+
+>>> ord('A')
+
+>>> ord('a')
+
+>>> ord(' ')
+
+
+Going the other direction we can find the character from the number.
+
+>>> chr(65)
+
+>>> chr(98)
+
+>>> ord('!')
+
+>>> chr(9)
+
+Remember: ord, chr, ord('A'), ord('a'), ord(' ')
+
+>>> ourtable = str.maketrans(A, B)
+>>> s.translate(ourtable)
+
+>>> s
+
+>>> s = s.translate(ourtable)
+
+>>> s
+
+>>> s = s.replace(' ', '')
+
+>>> s
+
+>>> s = s.translate(ourtable)
+
+
+>>> 'x'.isalpha()
+
+>>> '5'.isalpha()
+
+>>> '5'.isdigit() 
+
+
+>>> '5'.isalnum()
+
+>>> '123abc77'.isalnum()
+
+>>> '123abc 77'.isalnum()
+
+>>> s
+
+>>> result = []
+>>> for c in s:
+...     if c.isalpha():
+        result.append(c)
+>>> result
+
+>>> BLANK = ''
+
+>>> BLANK.join(result)
+

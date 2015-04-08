@@ -1,0 +1,122 @@
+Greetings CS131A,
+
+Here is an edited version of our shell commands questions from quiz03.
+I added a couple of more questions.
+
+-------------------
+Instructions:  In the space BELOW each command write in the exact output. 
+No explanations or text.
+If there would be an error, just write ERROR
+This time, in the solutions below I did not write None when there is no output.
+No minus points here, so give the best answer you can come up with.
+--------------------
+
+QUESTIONS WITH ANSWERS:
+
+Added  question: using comma in range
+
+>>> list(range(3, 5))
+[3, 4]
+
+Python can cast a string as a list:
+
+>>> list("digits")
+['d', 'i', 'g', 'i', 't', 's']
+
+Related question:
+
+>>> for c in "digits":
+...     print(c, end=":")
+d:i:g:i:t:s:
+
+
+>>> "4 1 5".split()
+['4', '1', '5']
+
+>>> d = {'how' : 'are', 'you': 'today'}
+
+Added question:
+
+>>> type(d)
+<class 'dict'>
+
+>>> d['you']
+'today'
+
+Added question: This counts the keys in the dict d.
+
+>>> len(d)
+2
+
+>>> comma =  ","
+
+>>> s = "name Elon CEO Tesla"
+
+A bit weird question:
+
+>>> comma.join(s)
+'n,a,m,e, ,E,l,o,n, ,C,E,O, ,T,e,s,l,a'
+
+Added question: Split the string first, then join using comma.
+
+>>> comma.join(s.split())
+'name,Elon,CEO,Tesla'
+
+
+>>> "Hello, python world.".split(comma)
+['Hello', ' python world.']
+
+
+>>> def myfun(n):
+...     if n % 2 == 0:
+...         return 10*n
+...     else:
+...         return 20*n
+
+
+>>> myfun(4), myfun(5)
+(40, 100)
+
+
+
+>>> def morefun(n):
+...    while n > 1:
+...        print(n, end=":")
+...        n = n // 2
+    
+>>> morefun(8)
+8:4:2:
+
+>>> def funny(n):
+...     """Triple n."""
+...     n = 3*n
+
+>>> funny(5)
+
+Define two functions.  One of them returns a value, the other returns None, but does print something.
+
+>>> def very(one):
+...     """Good one."""
+...     return one+one+one
+
+>>> def good(one):
+...     """Ok too."""
+...     print(one+one)
+
+
+>>> very('bad')
+'badbadbad'
+
+>>> good('bad')
+badbad
+
+>>> very(5)
+15
+
+>>> good(5)
+10
+
+-------------------------- end of file ---------------
+
+
+

@@ -1,0 +1,33 @@
+
+public class IntList2 {
+	
+	private int[] data; 
+	private int elementCount;
+	
+	public IntList(){
+		elementCount = 0;
+		setData(new int[2000000]);
+	}
+	
+	public void add(int value){
+		data[elementCount] = value;
+		elementCount ++;
+	}
+	
+	public int get(int index){
+		return data[index];
+	}
+	
+	public int size(){
+		return elementCount;
+	}
+
+	public int[] getData() {
+		return data;
+	}
+
+	public void setData(int[] data) {
+		this.data = data;
+	}
+
+}

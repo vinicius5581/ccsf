@@ -1,0 +1,53 @@
+Here we look at a few common ways to modify a list or set.
+
+
+Modifying a list. Including some common mistakes.
+
+
+>>> mylist = ['SF', 'LA', 'NY', 'Paris', 'Shanghai','Moscow']
+ 
+>>> len(mylist)
+
+>>> mylist.append('Rome')
+
+>>> len(mylist)
+
+>>> mylist
+
+>>> mylist = mylist + ['Boston']
+
+>>> len(mylist)
+
+>>> mylist = mylist.append('Madrid')
+
+Beware!
+
+>>> len(mylist)
+
+
+>>> mylist is None
+
+
+Modifying a set.  Including some common errors.
+
+Start with an empty set.
+
+>>> myset = set()
+
+>>> myset.add('Alice')
+>>> myset.add('Bob')
+>>> myset.add('Cynthia')
+>>> myset.add('David')
+>>> myset.add('Alice')
+
+>>> len(myset)
+
+>>> myset = myset.add('Eva')
+
+Beware!
+
+>>> len(myset)
+
+>>> myset is None
+
+

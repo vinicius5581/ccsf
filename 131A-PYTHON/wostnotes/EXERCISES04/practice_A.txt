@@ -1,0 +1,164 @@
+
+Greetings CS131A Students,
+
+Here is some interative shell practice. Good preparation for the quiz.
+
+
+(1) Print this file.
+
+(2) Write down what you expect the answers to be.
+
+(3) Run each command at the shell.
+
+    $ python3
+    >>> 3 * 'practice '
+
+
+
+
+
+>>> stocks = ['AAPL', 'FB', 'GOOG']
+
+>>> 'GO' in stocks
+
+
+>>> s = ':'.join(stocks)
+
+
+
+>>> type(s)
+
+
+
+
+>>> 'GO' in s
+
+
+
+>>> s
+
+
+
+
+
+
+
+
+>>> type("CARD")
+
+
+>>> "CARD"[-1]
+
+
+>>> "CARD"[1]
+
+
+
+>>> area = "415"
+
+
+
+
+
+
+
+>>> 1 in area
+
+
+
+
+>>> '1' in area
+
+
+
+
+>>> '1' in "area"
+
+
+
+
+# Iteration using for-loops.
+
+
+>>> for n in range(1, 4):
+...     print(word[0:n])
+... 
+
+
+
+
+
+>>> for n in range(1, 4):
+...     print(n, 10*n)
+
+
+
+
+
+
+>>> for n in range(5):
+...     print(n, n*str(n))
+... 
+
+
+
+
+
+
+>>> for n in "ABC":
+...     for m in "12":
+...         print(n+m)
+... 
+
+
+
+
+
+>>> LETTERS = ['H', 'E', 'L', 'L', 'O']
+
+>>> for letter in LETTERS:
+...     i = LETTERS.index(letter)
+...     print(letter, i)
+... 
+
+
+
+
+>>> len('abc')
+
+
+
+
+>>> len('abc\n')
+
+
+
+
+>>> chr(ord('\t'))
+
+
+
+
+
+
+>>> ord(chr(32))
+
+
+
+
+
+
+>>> ord('A') < ord('a')
+
+
+
+
+
+
+
+
+
+
+
+
+

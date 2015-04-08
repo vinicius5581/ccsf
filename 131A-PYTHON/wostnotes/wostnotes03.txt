@@ -1,0 +1,51 @@
+# Countdown.
+
+# FIRST WAY
+n = 10
+while n >= 0:
+    print(n)
+    n = n - 1
+print("Takeoff A!!")
+
+# SECOND WAY
+
+for i in [0, 1, 2, 3, 4, 5]:
+    print(i)
+print("Takeoff B!")
+
+# THIRD WAY
+for i in range(0, 5):
+    print(i)
+print("TAKEOFF C using range(0, 5)")
+
+# THIRD WAY
+badnumbers = [3, 7]
+for i in range(0, 10):
+    if i in badnumbers:
+        continue
+    print(i)
+print("Takeoff C using range(0, 10) with continue statement")
+
+# FOURTH WAY
+
+enough = 7
+
+for i in range(1000):
+    print(i, i*'A')
+    if i == enough:
+        break
+
+print("TAKEOFF D, leaving the loop using break")
+
+
+# Advanced: Nested loops.
+# Predict what the outpot will be.
+for i in 'ABC':
+    print("i is now ", i)
+    for j in [1, 2, 3, 4]:
+        print("j is now ", j)
+        print(i,j)
+
+
+
+

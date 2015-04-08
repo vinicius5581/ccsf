@@ -1,0 +1,144 @@
+'the dict type, a dictionary'
+'create our first dictionary, name it d'
+
+>>> d = dict()
+>>> d
+
+>>> type(d)
+
+>>> d['one'] = 'uno'
+>>> d['two'] = 'dos'
+>>> d['beer'] = 'cerveza'
+d
+
+>>> d['beer']
+
+>>> d['bear']
+
+>>> d['name'] = 'Tim'
+>>> len(d)
+
+>>> 'Tim' in d
+>>> 'name' in d
+>>> d
+>>> d.keys()
+
+>>> for k in d:
+... 	print(k, d[k])
+
+>>> d['three'] = 'tres'
+
+>>> d['beer'] = 'dos XX'
+
+>>> d
+
+>>> 3, 4, 5
+
+>>> 'The set data type. No duplicates in a set.'
+
+>>> s = set()
+
+>>> s.add('SF')
+
+>>> help(s)
+
+>>> dir(s)
+
+>>> 'another data type we use, often without noticing ...'
+>>> 'is the type tuple'
+
+>>> 3, 4
+
+>>> mytuple = (6, 7, 8, 4+5, 3+7)
+
+>>> mytuple
+
+>>> type(mytuple)
+
+>>> 'tuple is very similar to list, but not the same ... more later'
+>>> mytuple[1]
+>>> len(mytuple)
+>>> for x in (2, 3, 4, 5):
+... 	print(x, x**2)
+
+>>> mylist = [6, 7, 8, 9, 10]
+
+>>> mylist
+
+>>> mytuple
+
+>>> type(mylist), type(mytuple)
+
+>>> 'you can change an element in a list'
+>>> mylist[-1] = 999
+>>> mylist
+
+>>> 'try to change a tuple ... '
+>>> mytuple[0]=66
+
+>>> 'what?? ... tuples are IMMUTABLE, they can not be changed'
+
+>>> 'but lists like our mylist are MUTABLE, they can be changed'
+
+>>> 'for example, in graphics, a 3-tuple (x,y,z) for a fixed point is probably appropriate.'
+>>> 'can one change a string like one changes a list ?'
+>>> s = 'bot'
+>>> s[1]
+
+>>> 'try to change it to 'bat'
+>>> 'try to change it to bat'
+>>> s[1] = 'a'
+
+>>> 'did not work that way since str strings are IMMUTABLE, we would need to create a NEW string to get bat from bot. ... another time'
+
+>>> 'back to dict ... here is one more way of creating a dict ...'
+>>> 'start with a list of pairs, list of 2-tuples '
+>>> mypairs = [ ('flower', 'flor'), ('bear', 'ursa'), ('meal', 'comida')]
+
+>>> mypairs
+
+>>> 'then cast that as a dict ...'
+
+>>> en2sp = dict(mypairs)
+
+>>> type(en2sp)
+
+>>> en2sp['bear']
+
+>>> len(en2sp)
+
+>>> 'one more convenient data type is set'
+>>> mylist = [2, 4, 6, 2, 2, 4, 6]
+>>> myset = set([2, 4, 6, 2, 2, 4, 6])
+>>> type(mylist),type(myset)
+
+>>>len(myset) == len(mylist)
+
+
+>>> myset
+
+>>> mylist
+
+>>> 'note that sets use braces {   }, but lists use [ ] brackets'
+
+>>> 'dict also uses { } braces but also colons, see below'
+
+>>> en2sp
+
+>>> 'can we add to a set ?'
+
+>>> myset.add(888)
+
+>>> myset
+>>> 'no sense of order for sets :)'
+
+>>> myset[0]
+
+>>> 'can check membership ...'
+
+>>> 2 in mylist
+
+>>> 2 in mytuple
+
+>>> 2 in myset
+

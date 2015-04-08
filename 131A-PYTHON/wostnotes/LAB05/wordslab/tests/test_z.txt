@@ -1,0 +1,44 @@
+Some extra tests.
+
+>>> from words import is_word, wordset
+
+>>> is_word('Bob') and is_word('bob')
+True
+
+>>> is_word('nosuchword')
+False
+
+>>> is_word('MeSSy')
+True
+
+>>> 'Bob' in wordset(3)
+False
+
+>>> 'bob' in wordset(3)
+True
+
+>>> type(wordset(10))
+<class 'set'>
+
+
+>>> from rewords import is_reword, rewordset
+
+
+>>> is_reword('pat')
+True
+
+>>> 'pat' in rewordset(3)
+True
+
+>>> 'pat' in rewordset(4)
+False
+
+>>> 'tap' in rewordset(3)
+True
+
+
+>>> 'yrekab' in rewordset(6)
+False
+
+
+

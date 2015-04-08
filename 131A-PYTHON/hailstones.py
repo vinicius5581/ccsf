@@ -7,7 +7,7 @@
 
 
 
-seed = 420
+seed = 7
 
 n = seed
 

@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class NumberGuesser {
+
+	public static void main(String[] args) {
+		do {
+			playOneGame();
+		} while (shouldPlayAgain());
+	}
+	
+	public static void playOneGame(){
+		
+	}
+	public static boolean shouldPlayAgain(){
+		return true;
+	}
+	
+}

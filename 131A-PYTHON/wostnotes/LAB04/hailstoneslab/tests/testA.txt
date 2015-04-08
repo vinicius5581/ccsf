@@ -1,0 +1,9 @@
+>>> from formulas import ulam
+
+Testing the ulam
+
+>>> ulam(7)
+22
+>>> ulam(8)
+4
+
