@@ -1,0 +1,31 @@
+
+
+>>> from tableware import list2TDrow
+
+>>> mylist = ['San Francisco', 'Paris', 'London', 'Shanghai', 'Hong Kong']
+
+>>> list2TDrow(mylist)
+'<tr><td>San Francisco</td><td>Paris</td><td>London</td><td>Shanghai</td><td>Hong Kong</td></tr>'
+
+>>> list2TDrow(list('0123456'))
+'<tr><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>'
+
+
+>>> from tableware import list2THrow
+
+>>> headers = ['Last Name', 'First Name', 'Phone']
+
+>>> list2THrow(headers)
+'<tr><th>Last Name</th><th>First Name</th><th>Phone</th></tr>'
+
+>>> list2THrow(['item', 'unit price', 'units', 'price'])
+'<tr><th>item</th><th>unit price</th><th>units</th><th>price</th></tr>'
+
+
+
+>>> from tableware import caption
+
+>>> caption('These are a few of my Favorite Things')
+'<caption>These are a few of my Favorite Things</caption>'
+
+

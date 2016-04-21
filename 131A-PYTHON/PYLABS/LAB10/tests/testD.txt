@@ -1,0 +1,37 @@
+>>> import filetools
+>>> import tablemaker
+
+
+>>> file = 'data/webcolors.csv'
+
+>>> mylists = filetools.file2lists(file)
+
+>>> type(mylists)
+<class 'list'>
+
+There are 16 colors and one header so we get ...
+
+>>> len(mylists)
+17
+
+>>> mylists
+[['Name', 'Hex', 'Red', 'Green', 'Blue', 'Alt Name'], ['white', '#FFFFFF', '100%', '100%', '100%', 'white'], 
+...
+['fuchsia', '#FF00FF', '100%', '0%', '100%', 'high magenta'], ['purple', '#800080', '50%', '0%', '50%', 'low magenta']]
+
+>>> mytable = tablemaker.lists2table(mylists)
+
+>>> type(mytable)
+<class 'str'>
+
+>>> print(mytable)
+<table>
+<tr><th>Name</th><th>Hex</th><th>Red</th><th>Green</th><th>Blue</th><th>Alt Name</th></tr>
+<tr><td>white</td><td>#FFFFFF</td><td>100%</td><td>100%</td><td>100%</td><td>white</td></tr>
+<tr><td>silver</td><td>#C0C0C0</td><td>75%</td><td>75%</td><td>75%</td><td>light gray</td></tr>
+...
+<tr><td>fuchsia</td><td>#FF00FF</td><td>100%</td><td>0%</td><td>100%</td><td>high magenta</td></tr>
+<tr><td>purple</td><td>#800080</td><td>50%</td><td>0%</td><td>50%</td><td>low magenta</td></tr>
+</table>
+
+

@@ -1,0 +1,38 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class ClickCountMain{
+    public static void main(String[] args){
+        JFrame frame;
+        JTextField textField;
+        JButton upButton;
+        JButton downButton;
+
+        //Construc the Swing objects
+        frame = new JFrame("Click Counter");
+        textField = new JTextField("Count: 0");
+        upButton = new JButton("Up");
+	    downButton = new JButton("Down");
+
+	    //Add the components to the frame
+        frame.getContentPane().add(textField);
+	    frame.getContentPane().add(upButton);
+        frame.getContentPane().add(downButton);
+
+	    //Layout...
+	    frame.getContentPane().setPreferredSize(new Dimension(200, 100));
+	    frame.setLocation(300, 300);
+	    frame.setLayout(new FlowLayout());
+        textField.setPreferredSize(new Dimension(200, 50));
+        textField.setHorizontalAlignment(JLabel.CENTER);
+
+        //Listen for some actions
+        ClickCountController c = new ClickCountController(upButton, downButton,textField);
+	    upButton.addActionListener(c);
+	    downButton.addActionListener(c);
+
+        //Set visible
+        frame.pack();
+        frame.setVisible(true);
+    }
+}

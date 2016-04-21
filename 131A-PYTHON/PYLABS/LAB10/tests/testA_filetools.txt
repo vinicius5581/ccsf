@@ -1,0 +1,22 @@
+>>> from filetools import file2lists
+
+>>> filepath = 'data/forbeswomen.tsv'
+
+>>> file2lists(filepath)
+[['rank', 'country', 'name', 'title'], ['1', 'Germany', 'Angela Merkel', 'Chancellor of Germany'], ['2', 
+'United States', 'Janet Yellen', 'Chair of the Federal Reserve of the United States'], ..., ['17', 'United 
+States', 'Beyoncé Knowles', 'Singer-songwriter'], ..., ['50', 'United States', 'Angelina Jolie', 'Actress']]
+
+
+>>> mylist = file2lists('data/webcolors.csv')
+
+>>> type(mylist)
+<class 'list'>
+
+>>> len(mylist)
+17
+
+>>> mylist
+[['Name', 'Hex', 'Red', 'Green', 'Blue', 'Alt Name'], ..., ['purple', '#800080', '50%', '0%', '50%', 'low magenta']]
+
+

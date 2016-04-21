@@ -1,0 +1,27 @@
+Make sure you have the correct permissions!
+Your permission strings should match what you see below.
+
+
+$ ls -dl ~/public_html
+drwx-----x 
+
+$ ls -dl ~/public_html/cgi-bin
+drwxr-x--x 
+
+$ ls -dl ~/public_html/cgi-bin/tablelab
+drwxr-x--x    
+
+$ ls -dl ~/public_html/cgi-bin/tablelab/data
+drwxr-x--x
+
+$ ls -dl ~/public_html/cgi-bin/tablelab/css
+drwx--x--x 
+
+$ ls -l ~/public_html/cgi-bin/tablelab/data/forbeswomen.tsv 
+-rw------- 
+
+$ ls -l ~/public_html/cgi-bin/tablelab/css/downtownstyle.css 
+-rw-r--r-- 
+
+
+

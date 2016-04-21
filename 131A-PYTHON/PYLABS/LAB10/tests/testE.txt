@@ -1,0 +1,42 @@
+>>> import filetools
+>>> import tablemaker
+
+The forbeswomen file.
+
+>>> file = 'data/forbeswomen.tsv'
+
+>>> mylists = filetools.file2lists(file)
+
+>>> type(mylists)
+<class 'list'>
+
+The list has a header and the top fifty influential women, so we get a list of 51 lists.
+
+>>> len(mylists)
+51
+
+The headers are in the first list.
+
+>>> mylists[0]
+['rank', 'country', 'name', 'title']
+
+Make a table from mylists.
+
+>>> mytable = tablemaker.lists2table(mylists)
+
+>>> type(mytable)
+<class 'str'>
+
+
+>>> print(mytable)
+<table>
+<tr><th>rank</th><th>country</th><th>name</th><th>title</th></tr>
+<tr><td>1</td><td>Germany</td><td>Angela Merkel</td><td>Chancellor of Germany</td></tr>
+...
+<tr><td>16</td><td>Brazil</td><td>Graça Foster</td><td>CEO of Petrobras</td></tr>
+<tr><td>17</td><td>United States</td><td>Beyoncé Knowles</td><td>Singer-songwriter</td></tr>
+<tr><td>18</td><td>United States</td><td>Marissa Mayer</td><td>CEO of Yahoo!</td></tr>
+...
+<tr><td>50</td><td>United States</td><td>Angelina Jolie</td><td>Actress</td></tr>
+</table>
+

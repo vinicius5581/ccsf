@@ -1,0 +1,17 @@
+Name,Hex,Red,Green,Blue,Alt Name
+white,#FFFFFF,100%,100%,100%,white
+silver,#C0C0C0,75%,75%,75%,light gray
+gray,#808080,50%,50%,50%,dark gray
+black,#000000,0%,0%,0%,black
+red,#FF0000,100%,0%,0%,high red
+maroon,#800000,50%,0%,0%,low red
+yellow,#FFFF00,100%,100%,0%,yellow
+olive,#808000,50%,50%,0%,brown
+lime,#00FF00,0%,100%,0%,high green
+green,#008000,0%,50%,0%,low green
+aqua,#00FFFF,0%,100%,100%,high cyan
+yeal,#008080,0%,50%,50%,low cyan
+blue,#0000FF,0%,0%,100%,high blue
+navy,#000080,0%,0%,50%,low blue
+fuchsia,#FF00FF,100%,0%,100%,high magenta
+purple,#800080,50%,0%,50%,low magenta

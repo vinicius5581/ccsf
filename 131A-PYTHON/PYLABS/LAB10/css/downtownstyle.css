@@ -1,0 +1,39 @@
+
+table {
+    border-collapse: collapse;
+    margin: 4em;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+}
+
+
+table caption {
+    font-size: 2em;
+    color: blue;
+    padding: 0.5em;
+    
+}
+
+table tr th {
+    padding: 0.5em;
+    font-weight: bold;
+    height: 1.5em;
+    background-color: olive;
+    color: white;
+}
+
+table tr:nth-child(even) td{
+     background-color: silver;
+}
+
+table tr:nth-child(odd) td{
+}
+
+table tr td  {
+    padding: 0.2em;
+    font-family: cursive;
+    margin: 0.5em;
+}

@@ -1,0 +1,17 @@
+>>> from tablemaker import lists2table
+
+>>> mylists = [['city', 'country'], ['SF', 'USA'], ['Paris', 'France'], ['Stockholm', 'Sweden']]
+
+>>> mycaption = 'Great Cities'
+
+>>> mytable = lists2table(mylists, mycaption)
+
+>>> print(mytable)
+<table>
+<caption>Great Cities</caption>
+<tr><th>city</th><th>country</th></tr>
+<tr><td>SF</td><td>USA</td></tr>
+<tr><td>Paris</td><td>France</td></tr>
+<tr><td>Stockholm</td><td>Sweden</td></tr>
+</table>
+
