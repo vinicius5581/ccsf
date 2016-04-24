@@ -28,7 +28,7 @@ public class DiamondFilled {
     public static void main(String[] args) {
         Scanner myKeyboard = new Scanner(System.in);
 
-        System.out.print("Please enter the diamond side size: ");
+        System.out.print("Please enter the diamond side length: ");
 
         int side  = myKeyboard.nextInt();
         int length = 2 * side - 1;

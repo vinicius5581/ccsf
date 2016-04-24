@@ -10,12 +10,6 @@
 
 public class Main {
 
-    public static void printChars(int count, char c){
-        for(int i = 0; i < count; i++ ){
-            System.out.print(c);
-        }
-    }
-
 
     public static void main(String[] args) {
 
