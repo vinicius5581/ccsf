@@ -7,10 +7,11 @@ import java.util.Random;
  *
 
  The Monty Hall Paradox. Marilyn vos Savant described the following problem
- (loosely based on a game show hosted by Monty Hall) in a popular magazine: “Sup­
- pose you’re on a game show, and you’re given the choice of three doors:
+ (loosely based on a game show hosted by Monty Hall) in a popular magazine:
+ “Suppose you’re on a game show, and you’re given the choice of three doors:
 
  Behind one door is a car; behind the others, goats.
+
  You pick a door, say No. 1, and the host, who knows what’s behind the doors, opens another door, say No. 3, which has a goat.
  He then says to you, “Do you want to pick door No. 2?” Is it to your advantage to switch your choice?”
 
@@ -38,64 +39,135 @@ public class MontyHallParadox {
         Boolean isPlaying = true;
 
         while(isPlaying == true){
-            //Set the doors
-            boolean door1 = false;
-            boolean door2 = false;
-            boolean door3 = false;
-            boolean door1IsSelected = false;
-            boolean door2IsSelected = false;
-            boolean door3IsSelected = false;
-            int doorWithCar = randomNumber.nextInt(3) + 1;
 
-            switch (doorWithCar){
-                case 1: door1 = true;break;
-                case 2: door2 = true;break;
-                case 3: door3 = true;break;
+            int totalWins = 0;
+            int winSwitching = 0;
+            int winStaying = 0;
+
+            int strategy1 = 0;
+            int strategy2 = 0;
+            int firstGoat = 0;
+
+
+            for(int i = 0; i < 1000; i++){
+
+                // Choosing a door for the car
+                int doorWithCar = randomNumber.nextInt(3) + 1;
+
+                // Player Pick a door
+                int playerPick = randomNumber.nextInt(3) + 1;
+
+                // Host reveals a goat
+                int hostReveals = 0;
+                if (doorWithCar == 1){
+                    if (playerPick == 1){
+                        hostReveals = randomNumber.nextInt(2);
+                        if (hostReveals == 1){
+                            firstGoat = 2;
+                        } else {
+                            firstGoat = 3;
+                        }
+                    }
+                    if (playerPick == 2){
+                        firstGoat = 3;
+                    }
+                    if (playerPick == 3){
+                        firstGoat = 2;
+                    }
+                }
+                if (doorWithCar == 2){
+                    if (playerPick == 1){
+                        firstGoat = 3;
+                    }
+                    if (playerPick == 2){
+                        hostReveals = randomNumber.nextInt(2);
+                        if (hostReveals == 1){
+                            firstGoat = 1;
+                        } else {
+                            firstGoat = 3;
+                        }
+                    }
+                    if (playerPick == 3){
+                        firstGoat = 1;
+                    }
+                }
+                if (doorWithCar == 3){
+                    if (playerPick == 1){
+                        firstGoat = 2;
+                    }
+                    if (playerPick == 2){
+                        firstGoat = 1;
+                    }
+                    if (playerPick == 3){
+                        hostReveals = randomNumber.nextInt(2);
+                        if (hostReveals == 1){
+                            firstGoat = 1;
+                        } else {
+                            firstGoat = 2;
+                        }
+                    }
+                }
+
+                // Player Stay or Switch
+                int doesPlayerSwitch = randomNumber.nextInt(2);
+
+                if (doesPlayerSwitch == 1){
+                    strategy2 ++;
+                    if (playerPick == 1){
+                        if(firstGoat == 2){
+                            playerPick = 3;
+                        } else {
+                            playerPick = 2;
+                        }
+                    }
+                    if (playerPick == 2){
+                        if(firstGoat == 1){
+                            playerPick = 3;
+                        } else {
+                            playerPick = 1;
+                        }
+                    }
+                    if (playerPick == 3){
+                        if(firstGoat == 1){
+                            playerPick = 2;
+                        } else {
+                            playerPick = 1;
+                        }
+                    }
+                    if (playerPick == doorWithCar){
+                        winSwitching++;
+                        totalWins ++;
+                    }
+                } else {
+                    strategy1 ++;
+                    if (playerPick == doorWithCar){
+                        winStaying ++;
+                        totalWins ++;
+                    }
+                }
             }
 
-            System.out.println("doorWithCar" + doorWithCar);
-            System.out.println("door1: " + door1);
-            System.out.println("door2: " + door2);
-            System.out.println("door3: " + door3);
-            //Player pick door
+            // Print results
 
-            int playerPick = randomNumber.nextInt(3) + 1;
+            System.out.println("Total Plays: " + (strategy1 + strategy2));
+            System.out.println("\n -------------- \n");
 
-            switch (playerPick){
-                case 1: door1IsSelected = true;break;
-                case 2: door2IsSelected = true;break;
-                case 3: door3IsSelected = true;break;
-            }
+            System.out.println("Total Wins: " + totalWins);
+            System.out.println("Total Losts: " + ( (strategy1 + strategy2) - totalWins ));
 
-            System.out.println("playerPick: door" + playerPick);
+            System.out.println("\n -------------- \n");
 
-            //Host pick a door having a goat
+            System.out.println("Stayed with original pick " + strategy1 + " times and won " + winStaying + " each gives a margin of " + ((100 * winStaying) / strategy1) + "%");
+            System.out.println("Switch the door " + strategy2 + " times and won " + winSwitching + " each gives a margin of " + ((100 * winSwitching) / strategy2) + "%");
+
+            System.out.println("\n -------------- \n");
 
 
-            if (door1IsSelected == true){}
+            // Give user choice to simulate again
 
-            int hostPick;
-
-            //Strategy-1
-
-            //Strategy-2
-
-
-
-            for (int i = 0; i < 3; i ++){
-
-            }
-
-
-            for (int i = 0; i < 3; i++) {
-                int n = randomNumber.nextInt(3) + 1;
-                System.out.println(n);
-            }
-
-            System.out.println("Do you wan't to play again? (Y/N): ");
+            System.out.println("Do you wan't to simulate 1000 plays again? (Y/N): ");
             String answer = myKeyboard.nextLine();
             isPlaying = answer.equalsIgnoreCase("y");
         }
     }
-
 }
