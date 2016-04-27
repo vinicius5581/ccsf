@@ -1,20 +1,3 @@
-/**
- * Created by Vinicius Santana on 4/21/16.
- *
- * //P4.21 (page 192)[10 pts.]
- * Write a program that reads an integer and displays, using asterisks, a filled diamond
- * of the given side length. For example, if the side length is 4, the program should display
-
-     *
-    ***
-   *****
-  *******
-   *****
-    ***
-     *
-
- */
-
 import java.util.Scanner;
 
 public class DiamondFilled {
