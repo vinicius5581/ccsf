@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class MontyHallParadoxPlay {
 
-    public static void main(String[] args) {
+    public static void play(String[] args) {
         Scanner myKeyboard = new Scanner(System.in);
         Scanner myKeyboard1 = new Scanner(System.in);
         Scanner myKeyboard2 = new Scanner(System.in);
