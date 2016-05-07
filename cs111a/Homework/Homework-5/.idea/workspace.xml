@@ -25,14 +25,12 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5581854">
-              <caret line="221" column="44" selection-start-line="221" selection-start-column="44" selection-end-line="221" selection-end-column="44" />
+            <state vertical-scroll-proportion="-0.03550296">
+              <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="method#calcPow#0;class#Main#0" expanded="false" />
-                <element signature="method#printDigit#0;class#Main#0" expanded="false" />
-                <element signature="method#printBarCode#0;class#Main#0" expanded="false" />
-                <element signature="method#scratch#0;class#Main#0" expanded="false" />
+                <element signature="e#951#952#0" expanded="true" />
+                <element signature="e#991#992#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -353,14 +351,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5581854">
-          <caret line="221" column="44" selection-start-line="221" selection-start-column="44" selection-end-line="221" selection-end-column="44" />
+        <state vertical-scroll-proportion="-0.03550296">
+          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="method#calcPow#0;class#Main#0" expanded="false" />
-            <element signature="method#printDigit#0;class#Main#0" expanded="false" />
-            <element signature="method#printBarCode#0;class#Main#0" expanded="false" />
-            <element signature="method#scratch#0;class#Main#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
           </folding>
         </state>
       </provider>
