@@ -2,6 +2,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MontyHallParadox {
+
+
     public static void main(String[] args) {
         Scanner myKeyboard0 = new Scanner(System.in);
         Scanner myKeyboard01 = new Scanner(System.in);
