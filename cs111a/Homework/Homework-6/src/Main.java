@@ -138,16 +138,16 @@ public class Main {
         int p1Plays = 0;
         int p2Plays = 0;
         String winner = " ";
-        if(
-            (board[0] == board[1] && board[1] == board[2] && board[0] != ' ') ||
-            (board[3] == board[4] && board[4] == board[5] && board[3] != ' ') ||
-            (board[6] == board[7] && board[7] == board[8] && board[6] != ' ') ||
-            (board[0] == board[3] && board[3] == board[6] && board[0] != ' ') ||
-            (board[1] == board[4] && board[4] == board[7] && board[1] != ' ') ||
-            (board[2] == board[5] && board[5] == board[8] && board[2] != ' ') ||
-            (board[0] == board[4] && board[4] == board[8] && board[0] != ' ') ||
-            (board[2] == board[4] && board[4] == board[6] && board[2] != ' ')
-           ){
+        char winMark = ' ';
+        boolean comb1 = board[0] == board[1] && board[1] == board[2] && board[0] != ' ';
+        boolean comb2 = board[3] == board[4] && board[4] == board[5] && board[3] != ' ';
+        boolean comb3 = board[6] == board[7] && board[7] == board[8] && board[6] != ' ';
+        boolean comb4 = board[0] == board[3] && board[3] == board[6] && board[0] != ' ';
+        boolean comb5 = board[1] == board[4] && board[4] == board[7] && board[1] != ' ';
+        boolean comb6 = board[2] == board[5] && board[5] == board[8] && board[2] != ' ';
+        boolean comb7 = board[0] == board[4] && board[4] == board[8] && board[0] != ' ';
+        boolean comb8 = board[2] == board[4] && board[4] == board[6] && board[2] != ' ';
+        if ( comb1 || comb2 || comb3 || comb4 || comb5 || comb6 || comb7 || comb8 ){
             isWin = true;
             for(int i = 0; i < board.length; i++){
                 if (board[i] == 'O'){
@@ -158,6 +158,7 @@ public class Main {
                 }
             }
             winner = (p1Plays > p2Plays) ? "Player 1" : "Player 2";
+            winMark = (p1Plays > p2Plays) ? 'O' : 'X';
             System.out.println("* ************* *");
             System.out.println("* "+ winner +" wins *");
             System.out.println("* ************* *");
