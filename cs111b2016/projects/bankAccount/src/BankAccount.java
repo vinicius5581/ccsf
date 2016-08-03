@@ -1,52 +1,203 @@
-/**
- Part I- BankAccount Class
- Write a class to describe a BankAccount object. A bank account is described by:
-
- the account owner's name
- an account ID (stored as text)
- the balance in the account
- In your class, include:
-
- instance data variables (10 points)
- a constructor (10 points)
- getters and setters (with appropriate value checks, when applicable) (20 points)
- a toString method (you can decide the output) (10 points)
- a deposit method (with appropriate value checks; output an error message to the user when appropriate) (10 points)
- a withdraw method (with appropriate value checks; output an error message to the user when appropriate) (10 points)
-
- Part II- Driver Program
- Write an interactive driver program for the user to create and modify bank account objects. (30 points)
-
- The user should first create a bank account with an initial balance. The user can then repeatedly make a deposit, a withdrawal, check the balance, or quit.
-
- Extra Credit
- Include an interest rate as part of what describes a bank account. (20 points)
-
- Update the BankAccount as necessary.
- Include adding interest as a choice in the driver program. The user should enter, for example, 5 to indicate 5% interest (the user should not be required to enter 0.05).
- Notes
- To read double values from the user, use the following code. This code will avoid difficulties that you might encounter with the nextDouble method of the Scanner class.
- double amount = Double.parseDouble(scan.nextLine());
-
- I have provided a sample program you can run to see how the driver program works. The sample program includes the extra credit. To run the program:
- Download the JAR file.
- On a Mac, use a terminal window. On a PC, type "cmd" into the search box to use a command window.
- Navigate to the same directory where you downloaded the JAR file.
- Use the following command:
- java -jar BankOfJess.jar
-
- To submit your program, zip your BankAccount and driver classes together and upload the zip file.
- If submitting as a group, submit one assignment only through one group member's Insight account. Put the names of all group members in Java comments at the top of each Java file.
- */
-
+import java.util.*;
 
 public class BankAccount {
 
-//    String accountName;
-//    int accountId;
-//    double balance;
-//
-//    public static void toString(){};
-//    public static void deposit(){};
-//    public static void withdraw(){};
+    private String accountName;
+    private String accountId;
+    private double accountBalance;
+    private double accountInterest;
+    private Scanner keyboardInput = new Scanner(System.in);
+
+    // Constructor
+    public BankAccount(){
+        inputAccountName();
+        inputAccountId();
+        inputAccountBalance();
+        inputAccountInterest();
+    }
+
+    /**
+     *  Setters & Getters
+     */
+
+    // Account Name
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public void setAccountName(String acctName) {
+        this.accountName = acctName;
+    }
+
+    // Account Id
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    public void setAccountId(String acctId) {
+        this.accountId = acctId;
+    }
+
+    // Account Balance
+    public double getAccountBalance() {
+        return this.accountBalance;
+    }
+
+    public void setAccountBalance(double acctBal) {
+        this.accountBalance = acctBal;
+    }
+
+    // Account Interest
+    public double getAccountInterest(){
+        return this.accountInterest;
+    }
+
+    public void setAccountInterest(double acctInterest){
+        this.accountInterest = acctInterest;
+    }
+
+    /**
+     *  Account Input methods
+     */
+
+    public void inputAccountName(){
+        boolean ctl = true;
+        while (ctl == true) {
+            System.out.print("Enter the account name: ");
+            setAccountName(keyboardInput.nextLine());
+            if(getAccountName().length() != 0){
+                ctl = false;
+            } else {
+                System.out.println("Ops!!! Account name can't be empty");
+            }
+        }
+    }
+
+    public void inputAccountId(){
+        boolean ctl = true;
+        while (ctl == true) {
+            System.out.print("Enter the account id: ");
+            setAccountId(keyboardInput.nextLine());
+            if(!getAccountId().isEmpty()){
+                ctl = false;
+            } else {
+                System.out.println("Ops!!! Account id can't be empty");
+            }
+        }
+    }
+
+    public void inputAccountBalance(){
+        boolean ctl = true;
+        while (ctl == true) {
+            System.out.print("Enter the account balance: ");
+            try {
+                setAccountBalance(Double.parseDouble(keyboardInput.next()));
+                ctl = false;
+            } catch (NumberFormatException ignore) {
+                System.out.println("Ops!!! Balance must be a number");
+            }
+        }
+    }
+
+    public void inputAccountInterest(){
+        boolean ctl = true;
+        while (ctl == true) {
+            System.out.print("Enter the account interest: ");
+            try {
+                setAccountInterest(Double.parseDouble(keyboardInput.next()));
+                if(getAccountInterest() > 0){
+                    ctl = false;
+                } else {
+                    System.out.println("Ops!!! Interest must be greater then 0");
+                }
+            } catch (NumberFormatException ignore) {
+                System.out.println("Ops!!! Interest must be a number");
+            }
+        }
+    }
+
+    /**
+     *  Account Actions
+     */
+
+    public void makeDeposit(){
+
+        double amount;
+        boolean ctl = true;
+
+        while (ctl == true) {
+            System.out.print("Enter the deposit amount:");
+            try {
+                amount = Double.parseDouble(keyboardInput.next());
+                if(amount > 0){
+                    setAccountBalance(getAccountBalance() + amount);
+                    ctl = false;
+                } else {
+                    System.out.println("Ops!!! Deposit amount must be greater then 0");
+                }
+            } catch (NumberFormatException ignore) {
+                System.out.println("Ops!!! Deposit amount must be a number");
+            }
+        }
+    }
+
+    public void makeWithdraw(){
+        double amount;
+        boolean ctl = true;
+
+        while (ctl == true) {
+            System.out.print("Enter the withdraw amount:");
+            try {
+                amount = Double.parseDouble(keyboardInput.next());
+                if(amount > 0){
+                    setAccountBalance(getAccountBalance() - amount);
+                    ctl = false;
+                } else {
+                    System.out.println("Ops!!! Withdraw amount must be greater then 0");
+                }
+            } catch (NumberFormatException ignore) {
+                System.out.println("Ops!!! Withdraw amount must be a number");
+            }
+        }
+    }
+
+    public void addInterest(){
+        String msg;
+
+        msg = "The account balance was U$" + this.getAccountBalance();
+        setAccountBalance(this.getAccountBalance() + this.getAccountBalance() * this.getAccountInterest() / 100);
+        msg += " and after the interest of " + this.getAccountInterest() + "% been added it is now U$" + this.getAccountBalance();
+        System.out.println(msg);
+    }
+
+    /**
+     *  toString();
+     */
+
+    public String toString() {
+        String acct;
+        acct = "Account Name: " + getAccountName();
+        acct += "\nAccount Id: " + getAccountId();
+        acct += "\nAccount Balance: U$" + String.format("%.2f", getAccountBalance());
+        acct += "\nAccount Interest: " + String.format("%.2f", getAccountInterest()) + "%";
+        acct += "\n";
+        return acct;
+    }
+
+     public String printProperty(String property){
+        String acct;
+        if (property == "name"){
+            acct = "The account name is: " + getAccountName();
+        } else if (property == "id"){
+            acct = "The account id is: " + getAccountId();
+        } else if (property == "balance"){
+            acct = "The account balance is: U$" + String.format("%.2f", getAccountBalance());
+        } else if (property == "interest"){
+            acct = "The account interest is: " + String.format("%.2f", getAccountBalance()) + "%";
+        } else {
+            acct = "Type not supoorted";
+        }
+        return acct;
+    }
+
 }
